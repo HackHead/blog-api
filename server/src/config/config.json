@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "wantson",
+    "password": "@7813",
+    "database": "blog",
+    "host": "13.48.203.160",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "wantson",
+    "password": "@7813",
+    "database": "blog",
+    "host": "13.48.203.160",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "wantson",
+    "password": "@7813",
+    "database": "blog",
+    "host": "13.48.203.160",
+    "dialect": "postgres"
+  }
+}
