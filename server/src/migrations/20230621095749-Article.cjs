@@ -17,6 +17,11 @@ module.exports = {
         allowNull: true,
         defaultValue: DataTypes.NOW,
       },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
       authorId: {
         type: DataTypes.UUID,
         allowNull: true,
