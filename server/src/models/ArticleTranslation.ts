@@ -1,6 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
-import Article from './Article.js';
 import Language from './Language.js';
 
 class ArticleTranslation extends Model { };
@@ -15,6 +14,10 @@ ArticleTranslation.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    pub_date: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
     body: {
         type: DataTypes.STRING(65536),
     },
@@ -29,8 +32,6 @@ ArticleTranslation.init({
     timestamps: true,
 });
 
-ArticleTranslation.belongsTo(Language);
-ArticleTranslation.belongsTo(Article);
-
+ArticleTranslation.belongsTo(Language, {foreignKey: 'languageId', as: 'language'});
 
 export default ArticleTranslation;

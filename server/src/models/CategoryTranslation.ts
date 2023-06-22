@@ -16,13 +16,15 @@ CategoryTranslation.init({
         validate: {
             len: [2, 64],
         },
+        unique: true,
     },
 }, {
     sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
     timestamps: true,
 });
 
-CategoryTranslation.belongsTo(Category);
-CategoryTranslation.belongsTo(Language);
+Category.hasMany(CategoryTranslation, { as: 'localization', foreignKey: 'categoryId' });
+CategoryTranslation.belongsTo(Category, {as: 'category', foreignKey: 'categoryId'})
+CategoryTranslation.belongsTo(Language, {foreignKey: 'languageId', as: 'language'});
 
 export default CategoryTranslation;

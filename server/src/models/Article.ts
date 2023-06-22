@@ -1,31 +1,45 @@
+// @ts-nocheck 
 import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
 import User from './User.js';
 import Category from './Category.js';
-// import Domain from './Domain.js';
+import ArticleTranslation from './ArticleTranslation.js';
 
-class Article extends Model { };
+class Article extends Model {};
 
-Article.init({
+Article.init(
+  {
     id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-        primaryKey: true,
-      },
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+    },
     thumbnail: {
-        type: DataTypes.STRING,
+      type: DataTypes.STRING,
     },
-    pub_date: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
+    
+    name: {
+      type: DataTypes.STRING(128),
+      allowNull: false,
+      unique: true,
     },
-}, {
+  },
+  {
     sequelize: connection,
     timestamps: true,
-});
+    hooks: {
+      afterFind: function (result, options) {
+        result.forEach((item) => {
+          item.mambo = 'pizda';
+        });
+        return result;
+      },
+    }
+  }
+);
 
-Article.belongsTo(User, { as: 'author' });
-Article.belongsTo(Category);
-// Article.hasMany(Domain);
+Article.belongsTo(Category, { as: 'category', foreignKey: 'categoryId' });
+Article.hasMany(ArticleTranslation, { as: 'localization', foreignKey: 'articleId' });
+
 
 export default Article;

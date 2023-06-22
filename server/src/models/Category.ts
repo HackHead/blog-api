@@ -16,13 +16,12 @@ Category.init({
         validate: {
             len: [2, 64],
         },
+        unique: true,
     },
+    
 }, {
     sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
     timestamps: true,
 });
-
-Category.hasMany(CategoryTranslation);
-Category.hasMany(Article);
 
 export default Category;

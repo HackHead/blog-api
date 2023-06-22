@@ -15,6 +15,7 @@ Language.init({
         validate: {
             len: [2, 8],
         },
+        unique: true,
     },
     name: {
         type: DataTypes.STRING,
@@ -27,5 +28,10 @@ Language.init({
     sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
     timestamps: true,
 });
+
+Language.addHook('afterFind', (result, options) => {
+    // Custom logic to be executed after finding language
+    console.log('Language fetch request was made.'); // Example action
+  });
 
 export default Language;

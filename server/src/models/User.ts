@@ -1,5 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
+import Article from './Article.js';
 
 class User extends Model { };
 
@@ -47,5 +48,9 @@ User.init({
     sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
     timestamps: true,
 });
+
+
+User.hasMany(Article, { foreignKey: 'articleID'});
+Article.belongsTo(User, {as: 'author', foreignKey: 'authorId'})
 
 export default User;
