@@ -1,38 +1,50 @@
-import { Application, Router } from "./deps.ts"
-import Logger from "./modules/Logger.ts";
-import BlogRoutes from "./routes/Blog.ts"
 
-console.log(Deno.env.get('API_VERSION'))
-
+import Logger from "./modules/Logger.js"
+import express, {Application, Router} from 'express';
+import BlogRoutes from "./api/v1/routes/Blog.Routes.js";
+import AuthRoutes from "./api/v1/routes/Auth.Routes.js";
+import bodyParser from "body-parser";
+import { log } from "console";
 
 class App {
-    private APP: Application;
     private PORT: number;
+    private APP: Application;
 
     constructor() {
         this.PORT = 9999;
-        this.APP = new Application();
+        this.APP = express();
 
         this.boot();
+
     }
 
-    private setupRoutes(): void {
-        this.APP.use(BlogRoutes.routes());
-        this.APP.use(BlogRoutes.allowedMethods());
+    private setupRoutes(prefix: string, routes: Array<Router>): void {
+        routes.map((route) => this.APP.use(prefix, route))
+    }
+
+    private setupMiddleware(){
+        this.APP.use(log)
     }
     
-    private boot(): void {
-        this.setupRoutes();
-        
-        try {
-            this.APP.listen({
-                port: this.PORT,
+    private setupBodyParser(){
+        this.APP.use(bodyParser.urlencoded({ extended: true }));
+        this.APP.use(bodyParser.json());
+    }
+    
+    private async boot(): Promise<void> {
+        try {   
+            this.setupBodyParser();
+            // this.setupMiddleware();
+
+            this.setupRoutes('/api/v1', [BlogRoutes, AuthRoutes]);
+
+            this.APP.listen(this.PORT, () => {
+                Logger.info(`Your application succesffully up and running on port ${this.PORT}`)
             })
-            Logger.info(`Application successfully up and running on port ${this.PORT}`)
         } catch (error) {
-            Logger.error(`An error occured while setting up the application`, error     )
+            Logger.error('An error occured while setting up your application');
         }
     }
 }
 
-new App()
+new App();
