@@ -40,6 +40,11 @@ module.exports = {
           key: 'id',
         },
       },
+      pub_date: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        defaultValue: DataTypes.NOW,
+      },
       createdAt: {
         type: DataTypes.DATE,
         allowNull: false,

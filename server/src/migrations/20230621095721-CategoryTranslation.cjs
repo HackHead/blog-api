@@ -20,7 +20,6 @@ module.exports = {
           model: 'Languages',
           key: 'id',
         },
-        unique: true,
       },
       categoryId: {
         type: DataTypes.UUID,
@@ -40,11 +39,6 @@ module.exports = {
       },
     });
 
-    await queryInterface.addConstraint('CategoryTranslations', {
-      fields: ['name', 'categoryId'],
-      type: 'unique',
-      name: 'unique_name_per_category',
-    });
   },
 
   down: async (queryInterface) => {
