@@ -3,10 +3,10 @@ const seed = require('../db/seed.cjs')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return await queryInterface.bulkInsert('Users', await Promise.all(seed.users), {});
+    await queryInterface.bulkInsert('CategoryTranslations', seed.categoryTranslations, {});
   },
 
   down: async (queryInterface, Sequelize) => {
-    return await queryInterface.bulkDelete('Users', null, {});
-  }
+    await queryInterface.bulkDelete('CategoryTranslations', null, {});
+  },
 };
