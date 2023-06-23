@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { filter } from 'lodash';
 import { sentenceCase } from 'change-case';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // @mui
 import {
   Card,
@@ -21,11 +21,13 @@ import {
   IconButton,
   TableContainer,
   TablePagination,
-  Modal
+  Modal,
+  Grid,
+  CircularProgress,
+  Chip
 } from '@mui/material';
 
 // components
-import Label from '../components/label';
 import Iconify from '../components/iconify';
 import Scrollbar from '../components/scrollbar';
 // sections
@@ -33,14 +35,18 @@ import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
 // mock
 import USERLIST from '../_mock/user';
 
+import TokenModal from '../components/TokenModal'
+import server from '../http';
+import TokenListHead from '../sections/@dashboard/user/TokenListHead';
 // ----------------------------------------------------------------------
 
+
 const TABLE_HEAD = [
-  { id: 'name', label: 'Название', alignRight: false },
-  { id: 'company', label: 'Описание', alignRight: false },
-  { id: 'role', label: 'Доступ', alignRight: false },
-  { id: 'isVerified', label: 'Создан', alignRight: false },
-  { id: 'status', label: 'Использован', alignRight: false },
+  // { id: 'name', label: 'id', alignRight: false },
+  { id: 'company', label: 'Название', alignRight: false },
+  { id: 'role', label: 'Описание', alignRight: false },
+  { id: 'isVerified', label: 'Доступ', alignRight: false },
+  { id: 'status', label: 'Срок действия', alignRight: false },
   { id: '' },
 ];
 
@@ -92,12 +98,48 @@ export default function UserPage() {
 
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
-  const handleOpenMenu = (event) => {
+  const [tokens, setTokens] = useState([]);
+
+  const [isLoading, setLoading] = useState(true);
+
+  const [selectedTokenId, setSelectedTokenId] = useState(null);
+
+  const fetchTokens = async () => {
+    setLoading(true);
+    try {
+      const res = await server.get('/tokens');
+
+      const data = res.data.data;
+
+      setTokens(data)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const destroyToken = async () => {
+    handleCloseMenu()
+    try {
+      setLoading(true);
+      await server.delete(`/tokens/${selectedTokenId}`)
+      await fetchTokens();
+    } catch (error) {
+      console.log('An error occured')
+    } finally {
+      setLoading(false);
+    }
+  }
+  
+  const handleOpenMenu = (event, tokenId) => {
     setOpen(event.currentTarget);
+    setSelectedTokenId(tokenId);
   };
 
   const handleCloseMenu = () => {
     setOpen(null);
+    setSelectedTokenId(null);
   };
 
   const handleRequestSort = (event, property) => {
@@ -150,6 +192,14 @@ export default function UserPage() {
 
   const isNotFound = !filteredUsers.length && !!filterName;
 
+ 
+  
+  
+
+  useEffect(() => {
+    fetchTokens();
+  }, [])
+
   return (
     <>
       <Helmet>
@@ -167,109 +217,105 @@ export default function UserPage() {
         </Stack>
         <Card>
           {/* <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} /> */}
+          <TokenModal open={openTokenModal} onClose={() => {setOpenTokenModal(false)}} onCreate={() => {fetchTokens()}}/>
+          {
+            !isLoading ?
+              <>
+                <Scrollbar>
+                  <TableContainer sx={{ minWidth: 800 }}>
+                    <Table>
+                      <TokenListHead
+                        order={order}
+                        orderBy={orderBy}
+                        headLabel={TABLE_HEAD}
+                        rowCount={USERLIST.length}
+                        numSelected={selected.length}
+                        onRequestSort={handleRequestSort}
+                        onSelectAllClick={handleSelectAllClick}
+                      />
+                      <TableBody>
+                        {tokens.map((row) => {
+                          const { id, description, expirationDate, name, accessRights } = row;
+                          const selectedUser = selected.indexOf(name) !== -1;
 
-          <Scrollbar>
-            <TableContainer sx={{ minWidth: 800 }}>
-              <Table>
-                <UserListHead
-                  order={order}
-                  orderBy={orderBy}
-                  headLabel={TABLE_HEAD}
-                  rowCount={USERLIST.length}
-                  numSelected={selected.length}
-                  onRequestSort={handleRequestSort}
-                  onSelectAllClick={handleSelectAllClick}
-                />
-                <TableBody>
-                  {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                    const { id, name, role, status, company, avatarUrl, isVerified } = row;
-                    const selectedUser = selected.indexOf(name) !== -1;
+                          return (
+                            <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={selectedUser} >
+                              {/* <TableCell component="th" scope="row" padding="none" alignItems="center"> 
+                                <Stack direction="row" alignItems="center" spacing={2} sx={{px: '1rem'}}>
+                                  <Typography variant="subtitle2" noWrap>
+                                    {id}
+                                  </Typography>
+                                </Stack>
+                              </TableCell> */}
 
-                    return (
-                      <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={selectedUser}>
-                        <TableCell padding="checkbox">
-                          <Checkbox checked={selectedUser} onChange={(event) => handleClick(event, name)} />
-                        </TableCell>
+                              <TableCell align="center">{name}</TableCell>
+                              <TableCell align="center">
+                                {description}
+                              </TableCell>
+                              <TableCell align="center">{accessRights === 'fullAccess' ? <Chip label="Полный доступ" color="success" variant="outlined" /> : <Chip label="Только чтение" color="warning" variant="outlined" />}</TableCell>
 
-                        <TableCell component="th" scope="row" padding="none">
-                          <Stack direction="row" alignItems="center" spacing={2}>
-                            <Typography variant="subtitle2" noWrap>
-                              {name}
-                            </Typography>
-                          </Stack>
-                        </TableCell>
+                              <TableCell align="center">
+                                <Typography variant="subtitle2" noWrap>
+                                  {expirationDate || 'Бессрочно'}
+                                  </Typography>
+                                </TableCell>
 
-                        <TableCell align="left">{company}</TableCell>
 
-                        <TableCell align="left">{role}</TableCell>
 
-                        <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
+                              <TableCell align="right">
+                                <IconButton size="large" color="inherit" onClick={(e) => {handleOpenMenu(e, id)}}>
+                                  <Iconify icon={'eva:more-vertical-fill'} />
+                                </IconButton>
+                              </TableCell>
+                            </TableRow>
+                          );
+                        })}
+                        {emptyRows > 0 && (
+                          <TableRow style={{ height: 53 * emptyRows }}>
+                            <TableCell colSpan={6} />
+                          </TableRow>
+                        )}
+                      </TableBody>
 
-                        <TableCell align="left">
-                          <Label color={(status === 'banned' && 'error') || 'success'}>{sentenceCase(status)}</Label>
-                        </TableCell>
 
-                        <TableCell align="right">
-                          <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
-                            <Iconify icon={'eva:more-vertical-fill'} />
-                          </IconButton>
-                        </TableCell>
-                      </TableRow>
-                    );
-                  })}
-                  {emptyRows > 0 && (
-                    <TableRow style={{ height: 53 * emptyRows }}>
-                      <TableCell colSpan={6} />
-                    </TableRow>
-                  )}
-                </TableBody>
 
-                {isNotFound && (
-                  <TableBody>
-                    <TableRow>
-                      <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
-                        <Paper
-                          sx={{
-                            textAlign: 'center',
-                          }}
-                        >
-                          <Typography variant="h6" paragraph>
-                            Not found
-                          </Typography>
 
-                          <Typography variant="body2">
-                            No results found for &nbsp;
-                            <strong>&quot;{filterName}&quot;</strong>.
-                            <br /> Try checking for typos or using complete words.
-                          </Typography>
-                        </Paper>
-                      </TableCell>
-                    </TableRow>
-                  </TableBody>
-                )}
-              </Table>
-            </TableContainer>
-          </Scrollbar>
+                      {isNotFound && (
+                        <TableBody>
+                          <TableRow>
+                            <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
+                              <Paper
+                                sx={{
+                                  textAlign: 'center',
+                                }}
+                              >
+                                <Typography variant="h6" paragraph>
+                                  Not found
+                                </Typography>
 
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={USERLIST.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-            labelRowsPerPage={'На странице'}
-          />
+                                <Typography variant="body2">
+                                  No results found for &nbsp;
+                                  <strong>&quot;{filterName}&quot;</strong>.
+                                  <br /> Try checking for typos or using complete words.
+                                </Typography>
+                              </Paper>
+                            </TableCell>
+                          </TableRow>
+                        </TableBody>
+                      )}
+                    </Table>
+                  </TableContainer>
+                </Scrollbar>
+              </> :
+              <Grid container alignItems="center"
+                justifyContent="center"
+                sx={{ minHeight: '400px' }}>
+                <Grid item><CircularProgress /></Grid>
+              </Grid>
+          }
+
         </Card>
       </Container>
-
-      <Modal open={openTokenModal} onClose={() => setOpenTokenModal(false)}>
-       <Card>
-        e
-       </Card>
-        </Modal>
-
       <Popover
         open={Boolean(open)}
         anchorEl={open}
@@ -288,7 +334,7 @@ export default function UserPage() {
           },
         }}
       >
-        <MenuItem sx={{ color: 'error.main' }}>
+        <MenuItem sx={{ color: 'error.main' }} onClick={() => {destroyToken(); }}>
           <Iconify icon={'eva:trash-2-outline'} sx={{ mr: 2 }} />
           Удалить
         </MenuItem>
