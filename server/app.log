@@ -1858,3 +1858,1000 @@
 2023-06-22T15:50:40.706Z [BLOG] [32minfo[39m: Database connection successfully established
 2023-06-22T15:50:40.764Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
 2023-06-22T15:51:58.858Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:15:49.813Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-22T20:15:49.882Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-22T20:16:01.831Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:16:21.977Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:18:29.945Z [BLOG] [32minfo[39m: [GET] /api/v1/catetegories
+2023-06-22T20:18:29.945Z [BLOG] [32minfo[39m: [GET] /api/v1/catetegories
+2023-06-22T20:18:36.735Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-22T20:19:05.704Z [BLOG] [32minfo[39m: [GET] /api/v1/categories/2999be60-53dd-4050-8dd8-646cc0da1247
+2023-06-22T20:23:42.995Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:25:46.507Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-22T20:25:46.584Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-22T20:25:47.373Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:25:54.289Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-22T20:25:54.360Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-22T20:26:08.263Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-22T20:26:08.333Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-22T20:26:14.646Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:26:29.428Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:26:34.946Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:26:55.061Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:27:35.310Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:27:42.011Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:28:24.814Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:28:56.013Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:31:01.179Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:31:07.061Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:55:43.428Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:55:49.985Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:56:08.725Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:56:16.257Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:56:30.865Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:56:43.931Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:56:49.420Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:56:51.290Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T20:59:46.316Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T07:37:50.431Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T07:37:50.569Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T07:38:03.213Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T08:14:35.052Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T08:14:35.123Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T08:16:20.646Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T08:16:20.718Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T08:16:27.853Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T08:16:27.932Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T08:16:30.647Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T08:16:30.718Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T08:16:33.894Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:16:33.895Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:31:15.552Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T08:31:24.561Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T08:31:58.338Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T08:32:27.986Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:32:27.986Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:34:35.850Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T08:34:35.850Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T08:34:36.133Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T08:34:50.603Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:34:50.603Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:37:12.626Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:37:12.626Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:37:12.866Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:37:12.866Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:37:23.049Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:37:23.049Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:38:06.236Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:38:06.236Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:39:17.363Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:39:17.363Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:40:40.937Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:40:40.938Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:40:41.288Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:40:41.288Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:40:54.394Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:40:54.395Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:41:00.016Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:41:00.016Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:41:29.775Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:41:29.775Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:41:33.548Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:41:33.548Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:42:23.069Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:42:23.070Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:42:48.697Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:42:48.697Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:43:02.308Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:43:02.309Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:43:27.181Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:43:27.182Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:44:41.885Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:44:41.885Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:44:50.921Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:44:50.922Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:46:41.097Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:46:41.097Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:46:58.234Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:46:58.234Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:46:59.890Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:46:59.890Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:47:33.023Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:47:33.023Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:47:35.550Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:47:35.550Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:49:40.294Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:49:40.295Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:58:12.316Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T08:58:12.316Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:00:07.016Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:00:07.017Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:00:42.939Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:00:42.939Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:01:36.021Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:01:36.021Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:03:36.443Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:03:36.443Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:04:14.339Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:04:14.339Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:05:23.101Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:07:16.887Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:07:18.753Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:09:23.918Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:10:11.895Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:10:15.881Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:10:55.605Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:11:15.899Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:11:17.662Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:11:55.923Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:12:07.426Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:12:56.439Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:05.476Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:07.363Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:15.762Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:29.604Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:31.087Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:33.824Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:38.291Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:41.176Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:52.347Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:55.784Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:13:59.875Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:14:02.114Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:14:04.752Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:14:29.768Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:14:51.704Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:15:05.668Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:16:04.125Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:16:12.893Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:16:18.309Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:16:50.859Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:16:53.328Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:17:13.554Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:17:13.554Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:19:19.530Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:19:19.530Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:19:34.797Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:19:34.797Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:21:34.640Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:21:34.640Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:23:26.252Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:23:26.252Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:24:27.511Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:24:27.511Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:25:18.228Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:25:18.228Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:25:19.172Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:25:19.172Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:25:27.276Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:25:27.276Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:27:08.255Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:27:08.255Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:27:35.186Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:27:35.186Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:28:19.394Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:28:19.394Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:29:21.898Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:29:21.898Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:29:23.295Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:29:23.295Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:29:48.564Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:29:48.565Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:32:01.022Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:32:01.022Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:32:06.248Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:32:13.458Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:32:13.458Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:34:08.538Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:34:08.538Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:34:54.670Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:34:54.670Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:35:03.232Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:35:03.232Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:41:22.956Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:41:22.956Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:10.280Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:10.280Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:17.432Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:17.432Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:18.448Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:18.448Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:43.892Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T09:43:43.893Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T09:43:44.156Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T09:43:46.802Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:43:46.803Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:48:00.174Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:48:00.174Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:48:18.614Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:48:18.615Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:14.249Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:14.249Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:20.980Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:20.981Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:21.574Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:50:23.311Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:50:25.507Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:25.507Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:56.302Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:50:56.302Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:00.662Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:51:24.801Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:51:37.801Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:37.802Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:41.541Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:51:48.749Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:48.749Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:52.787Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:52.787Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:54.699Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:54.699Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:58.107Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:51:59.562Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:51:59.562Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:22.533Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:22.533Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:24.860Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:24.860Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:25.857Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:54:27.441Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:27.442Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:29.677Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:29.677Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:31.557Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:54:35.070Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:35.071Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:54:57.644Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:55:13.342Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:55:13.342Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:55:15.286Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:55:15.286Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:56:15.845Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:56:15.845Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:57:01.367Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T09:57:03.528Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T09:57:03.528Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:01:29.762Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T10:01:29.832Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T10:01:59.140Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T10:01:59.211Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T10:02:07.169Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:02:07.169Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:02:44.050Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:02:44.051Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:02:59.192Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T10:02:59.261Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T10:03:20.901Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:03:20.902Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:03:20.908Z [BLOG] [31merror[39m: An error occured while creating a token: Error: Association with alias "id" does not exist on APIToken
+2023-06-23T10:03:36.988Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T10:03:37.059Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T10:36:03.307Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T10:36:08.345Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:36:08.346Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:36:36.751Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:36:36.752Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:36:36.781Z [BLOG] [31merror[39m: An error occured while creating a token: Error: Association with alias "id" does not exist on APIToken
+2023-06-23T10:38:37.257Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T10:38:37.330Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T10:38:44.976Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:38:44.977Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:40:54.630Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:40:54.631Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:41:02.812Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:41:02.812Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:41:05.844Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:41:05.844Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:41:43.070Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:41:43.070Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:42:25.498Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/282adef9-e96d-4d83-b98f-6182578468e3
+2023-06-23T10:42:25.499Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/282adef9-e96d-4d83-b98f-6182578468e3
+2023-06-23T10:42:25.520Z [BLOG] [31merror[39m: An error occured while creating a token: Error: Association with alias "id" does not exist on APIToken
+2023-06-23T10:42:49.185Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T10:42:49.260Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T10:42:52.859Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/282adef9-e96d-4d83-b98f-6182578468e3
+2023-06-23T10:42:52.860Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/282adef9-e96d-4d83-b98f-6182578468e3
+2023-06-23T10:42:52.874Z [BLOG] [31merror[39m: An error occured while creating a token: Error: Association with alias "id" does not exist on APIToken
+2023-06-23T10:43:07.360Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T10:43:07.430Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T10:43:11.103Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/282adef9-e96d-4d83-b98f-6182578468e3
+2023-06-23T10:43:11.104Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/282adef9-e96d-4d83-b98f-6182578468e3
+2023-06-23T10:43:24.842Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:43:24.842Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:13.816Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:13.816Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:24.851Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:24.851Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:38.087Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:38.087Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:41.636Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:44:41.636Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:45:31.659Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:45:31.660Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:46:10.286Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:46:10.286Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:46:12.666Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:46:12.666Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:47:18.556Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:47:18.557Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:47:34.513Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:47:34.513Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:48:10.869Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:48:10.869Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:49:17.869Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:49:17.869Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:49:29.874Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:49:29.874Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:50:49.875Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:50:49.875Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:50:58.740Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:50:58.740Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:50:58.795Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:50:59.637Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:50:59.638Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:50:59.680Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:51:00.383Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:51:00.383Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:51:00.426Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:51:07.394Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:51:07.394Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:51:07.438Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:51:10.322Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:51:10.323Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:53:48.761Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:53:48.761Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:53:52.788Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/4044804a-c5f3-487d-aa0b-d27159a1bd8b
+2023-06-23T10:53:52.788Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/4044804a-c5f3-487d-aa0b-d27159a1bd8b
+2023-06-23T10:53:59.663Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:53:59.663Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:07.431Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:07.431Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:09.093Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:09.093Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:12.615Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:55:12.615Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/f9c19cba-390a-40db-a0af-c19331cb92f0
+2023-06-23T10:55:12.662Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:12.662Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:14.968Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/0d0a5b62-56a9-4acb-ba8e-70f6596aa85d
+2023-06-23T10:55:14.968Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/0d0a5b62-56a9-4acb-ba8e-70f6596aa85d
+2023-06-23T10:55:15.012Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:15.013Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:16.755Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/e403bb1b-71a1-4de7-9d90-fdb90afcebff
+2023-06-23T10:55:16.755Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/e403bb1b-71a1-4de7-9d90-fdb90afcebff
+2023-06-23T10:55:16.800Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:16.800Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:18.830Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:55:18.831Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:18.539Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:18.539Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:18.771Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:57:19.668Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:19.668Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:19.709Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:57:20.403Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:20.403Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:20.444Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:57:21.148Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:21.148Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:21.189Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:57:21.835Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:21.836Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T10:57:21.877Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T10:57:25.414Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:25.414Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:40.528Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/05fd4476-21e4-4c5c-ac44-f6c4bfc7f0df
+2023-06-23T10:57:40.528Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/05fd4476-21e4-4c5c-ac44-f6c4bfc7f0df
+2023-06-23T10:57:40.765Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:40.765Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:42.644Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/c5006d6b-5d48-418b-9c5b-3fb09729e2d2
+2023-06-23T10:57:42.644Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/c5006d6b-5d48-418b-9c5b-3fb09729e2d2
+2023-06-23T10:57:42.691Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:42.691Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:44.865Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/4b8095a2-85b3-413d-bdc2-d26be04efcfa
+2023-06-23T10:57:44.865Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/4b8095a2-85b3-413d-bdc2-d26be04efcfa
+2023-06-23T10:57:44.908Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:57:44.909Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:11.566Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:11.567Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:24.391Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:24.392Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:46.283Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:46.283Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:48.678Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:48.679Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:52.118Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:52.118Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:56.762Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:58:56.762Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:59:01.731Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:59:01.732Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:59:04.744Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:59:04.744Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:59:44.114Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T10:59:44.114Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:09.920Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:09.920Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:21.670Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:21.671Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:30.302Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:30.303Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:32.770Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:32.771Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:39.120Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:00:39.120Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:07.107Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:07.107Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:13.986Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:13.986Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:32.400Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:32.400Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:42.000Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:01:42.000Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:02:14.303Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/42de8d27-3b6e-4a27-b945-6e5f7a866439
+2023-06-23T11:02:14.303Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/42de8d27-3b6e-4a27-b945-6e5f7a866439
+2023-06-23T11:02:14.547Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:02:14.547Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:02:16.261Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/d199280d-2f27-4c03-89bb-196ec4274318
+2023-06-23T11:02:16.262Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/d199280d-2f27-4c03-89bb-196ec4274318
+2023-06-23T11:02:16.309Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:02:16.309Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:02:20.280Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:02:20.281Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:02:53.552Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T11:02:53.622Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T11:10:49.385Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/c7b95104-0feb-4468-ab32-666fb61185d2
+2023-06-23T11:10:49.385Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/c7b95104-0feb-4468-ab32-666fb61185d2
+2023-06-23T11:10:49.967Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:10:49.967Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:11:28.136Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:11:28.137Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:15:37.370Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:15:37.370Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:15:38.310Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:15:38.310Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:36:26.319Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T11:36:29.963Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:36:29.963Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:47:15.557Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:47:15.557Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:47:32.955Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:47:32.955Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:47:50.107Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:47:50.108Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:49:16.953Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:49:16.953Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:49:17.211Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T11:49:28.770Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:49:28.770Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:49:57.082Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:49:57.082Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:49:57.325Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T11:50:00.342Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:50:00.342Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:50:56.656Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:50:56.656Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:50:56.915Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T11:51:38.246Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:51:38.246Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:23.706Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:23.706Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:24.775Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:24.775Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:27.845Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:27.845Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:35.042Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:53:35.043Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:53:35.091Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T11:53:36.282Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:53:36.283Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:54:35.346Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:54:35.346Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:54:38.215Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:54:38.216Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:11.616Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:11.616Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:13.893Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:13.893Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:18.348Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:18.348Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:33.465Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:33.466Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:35.792Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:35.793Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:37.760Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:37.761Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:39.340Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:55:39.341Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:11.612Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:11.612Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:14.560Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:14.560Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:16.079Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:16.080Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:17.867Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:17.868Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:20.242Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:20.242Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:47.924Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:56:47.924Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:57:02.110Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:57:02.110Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:57:30.503Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:57:30.503Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:57:30.747Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T11:57:30.752Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:57:30.752Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:57:42.734Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:57:42.734Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:05.363Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/9e349dde-2366-4733-99cc-312b32cc26b9
+2023-06-23T11:58:05.363Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/9e349dde-2366-4733-99cc-312b32cc26b9
+2023-06-23T11:58:05.625Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:05.625Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:07.230Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/b94c8041-cdb0-48be-83e8-527ffa119f14
+2023-06-23T11:58:07.230Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/b94c8041-cdb0-48be-83e8-527ffa119f14
+2023-06-23T11:58:07.277Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:07.277Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:09.205Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/b76ed55f-79f5-488b-aea6-3f815d2ed1ef
+2023-06-23T11:58:09.205Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/b76ed55f-79f5-488b-aea6-3f815d2ed1ef
+2023-06-23T11:58:09.252Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:09.252Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:11.229Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/3c98c59c-569e-46ee-97c5-0a621b4ff2eb
+2023-06-23T11:58:11.230Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/3c98c59c-569e-46ee-97c5-0a621b4ff2eb
+2023-06-23T11:58:11.279Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:11.280Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:14.203Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:14.203Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:50.311Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:58:50.311Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T11:58:50.568Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T11:58:50.577Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T11:58:50.577Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:00:25.790Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T12:00:25.790Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T12:00:26.033Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T12:00:26.038Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:00:26.038Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:07.201Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:07.201Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:21.464Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T12:01:21.464Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T12:01:21.711Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T12:01:21.715Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:21.716Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:27.363Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/de0b86fd-c54c-4b49-9e6d-47bbcc0571e8
+2023-06-23T12:01:27.363Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/de0b86fd-c54c-4b49-9e6d-47bbcc0571e8
+2023-06-23T12:01:27.408Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:27.409Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:28.614Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/1eff7237-0a45-41e2-bd21-c8835f646ba6
+2023-06-23T12:01:28.614Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/1eff7237-0a45-41e2-bd21-c8835f646ba6
+2023-06-23T12:01:28.661Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:28.661Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:29.835Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/8898bc59-1ff0-4430-b167-0f6ca7d78214
+2023-06-23T12:01:29.835Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/8898bc59-1ff0-4430-b167-0f6ca7d78214
+2023-06-23T12:01:29.881Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:29.881Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:35.163Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:35.164Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:37.108Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T12:01:38.948Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T12:01:40.752Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:01:40.752Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:17:08.953Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:17:08.953Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:19:04.887Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:19:04.887Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:19:52.235Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:19:52.236Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:19:58.632Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T12:20:05.074Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T12:33:03.052Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:33:03.052Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:33:56.797Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:33:56.797Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:33:58.114Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T12:34:06.163Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:34:06.163Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:34:10.931Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T12:34:11.340Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:34:11.341Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:34:27.456Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:34:27.456Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:34:53.878Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T12:34:53.878Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T12:34:54.129Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T12:34:54.134Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:34:54.134Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:35:07.640Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/21975b71-a60b-4985-b2f1-7653a36992d3
+2023-06-23T12:35:07.640Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/21975b71-a60b-4985-b2f1-7653a36992d3
+2023-06-23T12:35:07.899Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:35:07.899Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T12:43:20.629Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T13:45:51.175Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T13:45:51.246Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T13:45:53.952Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:45:53.952Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:46:32.453Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:46:32.454Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:46:33.767Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:49:46.797Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:49:46.798Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:50:10.439Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:50:10.439Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:50:16.332Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:50:16.333Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:50:29.856Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:50:29.857Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:50:36.974Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:51:11.092Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:51:33.314Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:52:04.153Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:52:41.782Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:52:43.423Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:52:51.503Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:53:07.030Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:53:17.064Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:53:24.331Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:53:30.293Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:53:36.228Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:53:40.641Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:53:47.108Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:54:11.996Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:55:52.240Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:25.257Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:25.258Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:27.027Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:30.551Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:30.551Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:31.196Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:33.358Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:33.802Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:33.802Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:35.538Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:35.946Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:36.434Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:36.434Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:40.878Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:45.745Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:45.746Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:56:47.247Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:56:52.485Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:57:06.984Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:57:06.985Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:57:08.353Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:57:10.303Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:57:18.128Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:57:18.128Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:57:23.640Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:57:30.980Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:57:30.980Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T13:57:32.101Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T13:58:01.814Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:00:29.582Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:00:33.842Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:00:35.437Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:00:35.437Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:00:39.969Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:00:39.970Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:00:41.348Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:00:46.507Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:02:22.744Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:02:24.906Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:02:46.730Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:02:47.711Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:03:01.915Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:03:04.352Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:03:14.907Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:04:01.470Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:04:55.169Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:05:15.878Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:05:18.220Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:05:41.815Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:05:42.582Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:06:15.640Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:08:15.877Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:08:46.834Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:08:50.470Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:08:51.449Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:08:55.447Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:08:56.531Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:08:59.838Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:09:06.243Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:09:10.320Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:09:16.558Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:10:59.109Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:11:12.957Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:11:20.278Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:11:22.174Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:11:22.174Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:11:23.200Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:11:42.146Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:11:59.061Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:12:16.384Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:12:19.749Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:12:32.766Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:12:34.649Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:12:46.910Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:13:06.941Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:16:38.953Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:16:38.953Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:16:54.989Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T14:16:54.989Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T14:16:55.247Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T14:16:55.252Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:16:55.252Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:17:08.773Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T14:17:08.773Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T14:17:09.021Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T14:17:09.026Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:17:09.026Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:17:12.541Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:17:12.541Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:17:13.987Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:17:15.563Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:17:22.593Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:17:23.685Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:17:24.746Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:17:24.746Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:18:50.153Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:18:50.153Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:18:50.740Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:19:14.643Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:19:50.289Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:20:06.090Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:20:17.984Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:20:20.349Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:20.349Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:23.649Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:23.649Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:24.464Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:20:34.547Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:20:36.019Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:36.019Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:38.626Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/32064941-bfc2-4650-a6f2-95692ffccb54
+2023-06-23T14:20:38.627Z [BLOG] [32minfo[39m: [DELETE] /api/v1/tokens/32064941-bfc2-4650-a6f2-95692ffccb54
+2023-06-23T14:20:38.677Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:38.677Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:51.092Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:51.093Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:20:52.916Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:20:55.388Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:20:56.576Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:21:11.935Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:21:38.435Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:21:56.912Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:22:14.003Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:22:19.458Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:24:09.887Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:24:19.172Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:24:27.818Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:24:52.808Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:35:12.969Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:35:16.049Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:36:46.317Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:37:27.417Z [BLOG] [32minfo[39m: [POST] /api/v1/categories
+2023-06-23T14:37:27.718Z [BLOG] [32minfo[39m: Category "TestCategory" created successfully
+2023-06-23T14:39:13.474Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:39:29.296Z [BLOG] [32minfo[39m: [POST] /api/v1/categories
+2023-06-23T14:39:29.577Z [BLOG] [32minfo[39m: Category "Categoryblablabla" created successfully
+2023-06-23T14:39:32.092Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:39:55.094Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:40:06.760Z [BLOG] [32minfo[39m: [POST] /api/v1/categories
+2023-06-23T14:40:07.034Z [BLOG] [32minfo[39m: Category "test2" created successfully
+2023-06-23T14:40:08.834Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:40:23.690Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:40:27.215Z [BLOG] [32minfo[39m: [POST] /api/v1/categories
+2023-06-23T14:40:27.297Z [BLOG] [32minfo[39m: Category "mac" created successfully
+2023-06-23T14:40:27.302Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:42:23.591Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:42:23.591Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:42:25.474Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:42:28.599Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:42:29.308Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:43:01.040Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:43:03.035Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:43:03.036Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:43:04.174Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:43:04.174Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:43:05.893Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:43:07.473Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:43:14.299Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:43:14.598Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:43:16.451Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:43:29.154Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:43:29.154Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:01.848Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:01.848Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:02.365Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:44:03.074Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:03.074Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:04.010Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:44:07.502Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:44:14.473Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:14.473Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:20.965Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:20.965Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:22.705Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:44:56.953Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T14:44:56.953Z [BLOG] [32minfo[39m: [POST] /api/v1/tokens
+2023-06-23T14:44:57.211Z [BLOG] [32minfo[39m: Token successfully created
+2023-06-23T14:44:57.216Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:44:57.216Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:45:04.363Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:45:08.559Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:45:12.615Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:45:12.615Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:45:13.132Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:45:46.119Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:46:36.171Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:46:44.987Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:47:20.172Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:47:38.533Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:48:27.855Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:48:45.661Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:49:11.086Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:49:14.162Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:49:17.634Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:49:24.987Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:49:38.865Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:50:17.762Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:50:22.554Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:50:27.155Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:51:26.173Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:51:44.332Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:52:25.708Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:52:28.484Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:52:28.484Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T14:52:30.201Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:52:32.565Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:52:34.418Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:52:36.354Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:52:39.442Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T14:52:40.207Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T14:52:56.715Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T18:31:37.171Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T18:31:37.242Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T18:54:06.904Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T18:54:06.904Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T18:54:13.423Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T18:54:14.507Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T18:54:14.507Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T18:54:15.828Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T18:54:19.674Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T18:54:19.674Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T18:54:25.946Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T18:57:23.624Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T18:57:23.696Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T18:57:47.741Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T18:57:47.815Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T18:57:52.847Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T18:57:52.924Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T18:58:54.504Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T18:58:54.579Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T18:59:03.684Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T18:59:03.764Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T19:08:26.564Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T19:08:26.640Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T19:08:32.734Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:09:13.845Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:09:31.711Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:09:31.711Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:15:58.286Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T19:15:58.358Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T19:16:13.488Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:19:23.450Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:22:25.047Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:29:12.715Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:29:15.750Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:29:19.651Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:29:19.651Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:29:25.892Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:30:25.279Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:30:25.279Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:32:52.391Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:33:18.393Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:33:21.846Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:33:59.390Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:37:18.360Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:37:23.478Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:38:06.203Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:39:26.011Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:39:26.745Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:39:27.208Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:39:27.209Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:40:57.824Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:41:39.040Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:41:39.041Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T19:41:41.540Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:46:41.554Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:52:12.431Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:54:56.637Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T19:59:44.048Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T19:59:51.391Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:12:03.375Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:12:04.077Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:12:04.077Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:14:54.447Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:14:58.984Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:15:29.068Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:15:29.069Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:16:25.232Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:16:31.729Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:16:32.384Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:16:33.144Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:16:46.996Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:16:46.996Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:16:48.644Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:16:49.745Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:16:50.342Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:16:50.343Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:16:59.464Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:17:12.080Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:17:15.621Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:17:15.622Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:18:06.635Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:18:09.182Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:18:09.183Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:18:09.875Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:18:13.456Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:18:15.161Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:18:17.762Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:18:17.763Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:18:45.265Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:18:49.093Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:18:49.942Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:19:20.960Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:19:20.960Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:19:21.599Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:19:22.771Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:19:22.772Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:21:15.967Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:21:15.967Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:21:18.384Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:22:02.804Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:22:05.593Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:22:56.875Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:23:06.152Z [BLOG] [32minfo[39m: [POST] /api/v1/categories
+2023-06-23T20:23:43.301Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:23:53.316Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:24:01.014Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:24:02.045Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:24:04.447Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:26:01.007Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:30:25.186Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:31:40.999Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:31:41.000Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:34:54.830Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:34:54.830Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:34:59.575Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:34:59.575Z [BLOG] [32minfo[39m: [GET] /api/v1/tokens
+2023-06-23T20:46:55.501Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T20:48:40.903Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:48:40.977Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:48:51.473Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:48:51.545Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:50:04.998Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:50:05.070Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:51:12.432Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:51:12.505Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:51:27.223Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:51:27.292Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:51:29.634Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:51:29.705Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:53:36.625Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:53:36.697Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:56:52.612Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:56:52.684Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:57:04.650Z [BLOG] [32minfo[39m: [GET] /api/v1/categories
+2023-06-23T20:57:23.906Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:57:23.977Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T20:58:49.862Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T20:58:49.934Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T21:00:12.344Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T21:00:12.412Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T21:01:26.762Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-23T21:03:42.646Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T21:03:42.716Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T21:05:20.813Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T21:05:20.882Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
+2023-06-23T21:08:48.015Z [BLOG] [32minfo[39m: Database connection successfully established
+2023-06-23T21:08:48.085Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999

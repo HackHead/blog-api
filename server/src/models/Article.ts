@@ -1,11 +1,11 @@
-// @ts-nocheck 
+// @ts-nocheck
 import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
 import User from './User.js';
 import Category from './Category.js';
 import ArticleTranslation from './ArticleTranslation.js';
 
-class Article extends Model {};
+class Article extends Model {}
 
 Article.init(
   {
@@ -17,7 +17,7 @@ Article.init(
     thumbnail: {
       type: DataTypes.STRING,
     },
-    
+
     name: {
       type: DataTypes.STRING(128),
       allowNull: false,
@@ -34,12 +34,14 @@ Article.init(
         });
         return result;
       },
-    }
+    },
   }
 );
 
 Article.belongsTo(Category, { as: 'category', foreignKey: 'categoryId' });
-Article.hasMany(ArticleTranslation, { as: 'localization', foreignKey: 'articleId' });
-
+Article.hasMany(ArticleTranslation, {
+  as: 'localization',
+  foreignKey: 'articleId',
+});
 
 export default Article;
