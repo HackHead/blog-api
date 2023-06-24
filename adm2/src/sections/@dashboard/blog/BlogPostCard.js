@@ -57,15 +57,15 @@ BlogPostCard.propTypes = {
 };
 
 export default function BlogPostCard({ post, index }) {
-  const { cover, title, view, comment, share, author, createdAt } = post;
+  const { id, createdAt, updatedAt, thumbnail, pubDate, name, author, category } = post;
   const latestPostLarge = index === 0;
   const latestPost = index === 1 || index === 2;
-
-  const POST_INFO = [
-    { number: comment, icon: 'eva:message-circle-fill' },
-    { number: view, icon: 'eva:eye-fill' },
-    { number: share, icon: 'eva:share-fill' },
-  ];
+  
+  // const POST_INFO = [
+  //   { number: comment, icon: 'eva:message-circle-fill' },
+  //   { number: view, icon: 'eva:eye-fill' },
+  //   { number: share, icon: 'eva:share-fill' },
+  // ];
 
   return (
     <Grid item xs={12} sm={6} md={4}>
@@ -85,17 +85,17 @@ export default function BlogPostCard({ post, index }) {
             }}
           />
           <StyledAvatar
-            alt={author.name}
+            alt={author.full_name}
             src={author.avatarUrl}
           />
 
-          <StyledCover alt={title} src={cover} />
+          <StyledCover alt={'title'} src={thumbnail} />
         </StyledCardMedia>
 
         <CardContent
         >
           <Typography gutterBottom variant="caption" sx={{ color: 'text.disabled', display: 'block' }}>
-            {fDate(createdAt)}
+            {fDate(createdAt)} by {author.full_name}
           </Typography>
 
           <StyledTitle
@@ -103,27 +103,23 @@ export default function BlogPostCard({ post, index }) {
             variant="subtitle2"
             underline="hover"
           >
-            {title}
+            {name}
           </StyledTitle>
 
-          <StyledInfo>
-            {POST_INFO.map((info, index) => (
-              <Box
-                key={index}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  ml: index === 0 ? 0 : 1.5,
-                  ...((latestPostLarge || latestPost) && {
-                    color: 'grey.500',
-                  }),
-                }}
-              >
-                <Iconify icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }} />
-                <Typography variant="caption">{fShortenNumber(info.number)}</Typography>
-              </Box>
-            ))}
-          </StyledInfo>
+          <Box
+            key={index}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              // ml: index === 0 ? 0 : 1.5,
+              // ...((latestPostLarge || latestPost) && {
+              //   color: 'grey.500',
+              // }),
+            }}
+          >
+            {/* <Iconify icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }} /> */}
+            <Typography variant="caption">{category.name}</Typography>
+          </Box>
         </CardContent>
       </Card>
     </Grid>

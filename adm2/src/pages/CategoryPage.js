@@ -1,7 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { filter } from 'lodash';
 import { sentenceCase } from 'change-case';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import emojiFlags from 'emoji-flags';
+
 // @mui
 import {
   Card,
@@ -21,7 +23,13 @@ import {
   IconButton,
   TableContainer,
   TablePagination,
+  CircularProgress,
+  Grid,
+  Alert,
+  Snackbar
 } from '@mui/material';
+import CategoryCreationModal from '../components/CategoryCreationModal';
+
 // components
 import Label from '../components/label';
 import Iconify from '../components/iconify';
@@ -30,15 +38,15 @@ import Scrollbar from '../components/scrollbar';
 import { UserListHead, UserListToolbar } from '../sections/@dashboard/user';
 // mock
 import USERLIST from '../_mock/user';
+import server from '../http';
+import CategoryListHead from '../sections/@dashboard/user/CategoryListHead';
 
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
+  { id: 'id', label: 'Id', alignRight: false },
+  { id: 'name', label: 'Название', alignRight: false },
+  { id: 'status', label: 'Доступные переводы', alignRight: false },
   { id: '' },
 ];
 
@@ -88,6 +96,14 @@ export default function UserPage() {
 
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
+  const [openCreationModal, setOpenCreationModal] = useState(false);
+
+  const [categories, setCategories] = useState([]);
+
+  const [isFetching, setFetching] = useState(true);
+
+  const [selectedIds, setSelectedIds] = useState([]);
+  
   const handleOpenMenu = (event) => {
     setOpen(event.currentTarget);
   };
@@ -123,6 +139,7 @@ export default function UserPage() {
     } else if (selectedIndex > 0) {
       newSelected = newSelected.concat(selected.slice(0, selectedIndex), selected.slice(selectedIndex + 1));
     }
+    console.log(selected)
     setSelected(newSelected);
   };
 
@@ -146,6 +163,25 @@ export default function UserPage() {
 
   const isNotFound = !filteredUsers.length && !!filterName;
 
+  const fetchCategories = async () => {
+    setFetching(true);
+    try {
+      const res = await server.get('/categories')
+
+      const data = res.data.data
+
+      setCategories(data)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setFetching(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchCategories();
+  }, [])
+
   return (
     <>
       <Helmet>
@@ -157,108 +193,85 @@ export default function UserPage() {
           <Typography variant="h4" gutterBottom>
             Категории
           </Typography>
-          <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
+          <Button variant="contained" onClick={() => setOpenCreationModal(true)} startIcon={<Iconify icon="eva:plus-fill" />}>
             Добавить категорию
           </Button>
         </Stack>
-
+        <CategoryCreationModal open={openCreationModal} onClose={() => setOpenCreationModal(false)} onCreate={() => fetchCategories()} />
         <Card>
-          <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
-
-          <Scrollbar>
-            <TableContainer sx={{ minWidth: 800 }}>
-              <Table>
-                <UserListHead
-                  order={order}
-                  orderBy={orderBy}
-                  headLabel={TABLE_HEAD}
-                  rowCount={USERLIST.length}
-                  numSelected={selected.length}
-                  onRequestSort={handleRequestSort}
-                  onSelectAllClick={handleSelectAllClick}
-                />
-                <TableBody>
-                  {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                    const { id, name, role, status, company, avatarUrl, isVerified } = row;
-                    const selectedUser = selected.indexOf(name) !== -1;
-
-                    return (
-                      <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={selectedUser}>
-                        <TableCell padding="checkbox">
-                          <Checkbox checked={selectedUser} onChange={(event) => handleClick(event, name)} />
-                        </TableCell>
-
-                        <TableCell component="th" scope="row" padding="none">
-                          <Stack direction="row" alignItems="center" spacing={2}>
-                            <Avatar alt={name} src={avatarUrl} />
-                            <Typography variant="subtitle2" noWrap>
-                              {name}
-                            </Typography>
-                          </Stack>
-                        </TableCell>
-
-                        <TableCell align="left">{company}</TableCell>
-
-                        <TableCell align="left">{role}</TableCell>
-
-                        <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
-
-                        <TableCell align="left">
-                          <Label color={(status === 'banned' && 'error') || 'success'}>{sentenceCase(status)}</Label>
-                        </TableCell>
-
-                        <TableCell align="right">
-                          <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
-                            <Iconify icon={'eva:more-vertical-fill'} />
-                          </IconButton>
-                        </TableCell>
-                      </TableRow>
-                    );
-                  })}
-                  {emptyRows > 0 && (
-                    <TableRow style={{ height: 53 * emptyRows }}>
-                      <TableCell colSpan={6} />
-                    </TableRow>
-                  )}
-                </TableBody>
-
-                {isNotFound && (
+          
+          {
+            isFetching ? <Grid container alignItems="center"
+              justifyContent="center"
+              sx={{ minHeight: '400px' }}>
+              <Grid item><CircularProgress /></Grid>
+            </Grid> : <>
+            <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} />
+            <Scrollbar>
+              <TableContainer sx={{ minWidth: 800 }}>
+                <Table>
+                  <CategoryListHead
+                    order={order}
+                    orderBy={orderBy}
+                    headLabel={TABLE_HEAD}
+                    rowCount={USERLIST.length}
+                    numSelected={selected.length}
+                    onRequestSort={handleRequestSort}
+                    onSelectAllClick={handleSelectAllClick}
+                  />
                   <TableBody>
-                    <TableRow>
-                      <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
-                        <Paper
-                          sx={{
-                            textAlign: 'center',
-                          }}
-                        >
-                          <Typography variant="h6" paragraph>
-                            Not found
-                          </Typography>
+                    {categories.length && categories.map((row) => {
+                      const { id, name, localization } = row;
+                      const selectedUser = selected.indexOf(name) !== -1;
 
-                          <Typography variant="body2">
-                            No results found for &nbsp;
-                            <strong>&quot;{filterName}&quot;</strong>.
-                            <br /> Try checking for typos or using complete words.
-                          </Typography>
-                        </Paper>
-                      </TableCell>
-                    </TableRow>
+                      return (
+                        <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={selectedUser}>
+                          <TableCell padding="checkbox">
+                            <Checkbox checked={selectedUser} onChange={(event) => handleClick(event, name)} />
+                          </TableCell>
+                          <TableCell align="center">{id}</TableCell>
+                          <TableCell align="center">{name}</TableCell>
+
+                          <TableCell align="center">
+                            {localization.map((locale) => {
+                              return locale.language.code.toUpperCase()
+                              // return emojiFlags[locale.language.code.toUpperCase()].emoji
+                            }).join(', ') || '-'}
+
+                          </TableCell>
+
+                          <TableCell align="right">
+                            <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
+                              <Iconify icon={'eva:more-vertical-fill'} />
+                            </IconButton>
+                          </TableCell>
+                        </TableRow>
+                      );
+                    })}
+                    {emptyRows > 0 && (
+                      <TableRow style={{ height: 53 * emptyRows }}>
+                        <TableCell colSpan={6} />
+                      </TableRow>
+                    )}
                   </TableBody>
-                )}
-              </Table>
-            </TableContainer>
-          </Scrollbar>
 
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={USERLIST.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-            labelRowsPerPage={'На странице'}
-          />
+
+                </Table>
+              </TableContainer>
+            </Scrollbar>
+
+              <TablePagination
+                rowsPerPageOptions={[15, 50, 100]}
+                component="div"
+                count={USERLIST.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage}
+                labelRowsPerPage={'На странице'}
+              /></>
+          }
+
         </Card>
       </Container>
 
@@ -282,12 +295,12 @@ export default function UserPage() {
       >
         <MenuItem>
           <Iconify icon={'eva:edit-fill'} sx={{ mr: 2 }} />
-          Edit
+          Изменить
         </MenuItem>
 
         <MenuItem sx={{ color: 'error.main' }}>
           <Iconify icon={'eva:trash-2-outline'} sx={{ mr: 2 }} />
-          Delete
+          Удалить
         </MenuItem>
       </Popover>
     </>
