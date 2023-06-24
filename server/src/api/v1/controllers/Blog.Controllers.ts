@@ -20,6 +20,102 @@ import isValidUUIDArray from '../../../validations/isValidUUIDArray.js';
 const validator = val.default;
 
 export default class BlogControllers {
+  public static async deleteArticleTranslation(req: Request, res: Response) {
+    const { id } = req.params;
+
+    if (!uuidValidate(id)) {
+      return res.status(400).json({
+        error: {
+          statusCode: 400,
+          message: 'Invalid id provided',
+        },
+      });
+    }
+
+    const deletedArticle = await ArticleTranslation.destroy({
+      where: {
+        id,
+      },
+    });
+
+    return res.json({
+      data: deletedArticle,
+      meta: {},
+    });
+  }
+
+  public static async deleteCategoryTranslation(req: Request, res: Response) {
+    const {ids} = req.query;
+
+    if (typeof ids === 'string' && !isValidUUIDArray(ids?.split(','))) {
+      return res.status(400).json({
+        error: {
+          statusCode: 400,
+          message: 'Invalid array of uuids provded',
+        },
+      });
+    }
+
+    const deletedTranslation = await CategoryTranslation.destroy({
+      where: {
+        id: ids,
+      },
+    });
+
+    return res.json({
+      data: deletedTranslation,
+      meta: {},
+    });
+  }
+
+  public static async deleteArticle(req: Request, res: Response) {
+    const { id } = req.params;
+
+    if (!uuidValidate(id)) {
+      return res.status(400).json({
+        error: {
+          statusCode: 400,
+          message: 'Invalid id provided',
+        },
+      });
+    }
+
+    const deletedArticle = await Article.destroy({
+      where: {
+        id,
+      },
+    });
+
+    return res.json({
+      data: deletedArticle,
+      meta: {},
+    });
+  }
+
+  public static async deleteArticles(req: Request, res: Response) {
+    const {ids} = req.query;
+
+    if (typeof ids === 'string' && !isValidUUIDArray(ids?.split(','))) {
+      return res.status(400).json({
+        error: {
+          statusCode: 400,
+          message: 'Invalid array of uuids provded',
+        },
+      });
+    }
+
+    const deletedArticles = await Article.destroy({
+      where: {
+        id: ids,
+      },
+    });
+
+    return res.json({
+      data: deletedArticles,
+      meta: {},
+    });
+  }
+  
   public static async deleteCategory(req: Request, res: Response) {
     const { id } = req.params;
 
@@ -45,9 +141,9 @@ export default class BlogControllers {
   }
 
   public static async deleteCategories(req: Request, res: Response) {
-    const ids = req.body;
+    const {ids} = req.query;
 
-    if (!isValidUUIDArray(ids)) {
+    if (typeof ids === 'string' && !isValidUUIDArray(ids?.split(','))) {
       return res.status(400).json({
         error: {
           statusCode: 400,

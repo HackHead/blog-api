@@ -42,6 +42,7 @@ Article.belongsTo(Category, { as: 'category', foreignKey: 'categoryId' });
 Article.hasMany(ArticleTranslation, {
   as: 'localization',
   foreignKey: 'articleId',
+  onDelete: 'CASCADE',
 });
 
 export default Article;
