@@ -14,17 +14,17 @@ router
   .get('/articles', BlogControllers.getArticles)
   .get('/categories', BlogControllers.getCategories)
   .get('/categories/:id', BlogControllers.getCategory)
-  
-  .delete('/categories', BlogControllers.deleteCategories)
-  .delete('/categories/:id', BlogControllers.deleteCategory)
-  .delete('/artticles', (req, res) => {}) 
-  .delete('/artticles/id', (req, res) => {}) 
-  .delete('/categories/translation/id', (req, res) => {}) 
-  .delete('/articles/translation/id', (req, res) => {}) 
-  .patch('/artticles', (req, res) => {}) 
-  .patch('/artticles/id', (req, res) => {}) 
-  .patch('/categories/translation/id', (req, res) => {}) 
-  .patch('/articles/translation/id', (req, res) => {}) 
+
+    .delete('/categories', BlogControllers.deleteCategories)
+    .delete('/categories/:id', BlogControllers.deleteCategory)
+    .delete('/artticles', (req, res) => {}) 
+    .delete('/artticles/id', (req, res) => {}) 
+    .delete('/categories/translation/id', (req, res) => {}) 
+    .delete('/articles/translation/id', (req, res) => {}) 
+    .patch('/artticles', (req, res) => {}) 
+    .patch('/artticles/id', (req, res) => {}) 
+    .patch('/categories/translation/id', (req, res) => {}) 
+    .patch('/articles/translation/id', (req, res) => {}) 
 
 
 export default router;
