@@ -52,7 +52,8 @@ User.init(
   }
 );
 
-User.hasMany(Article, { foreignKey: 'articleID' });
+  
+User.hasMany(Article, { foreignKey: 'articleID', onDelete: 'CASCADE' });
 Article.belongsTo(User, { as: 'author', foreignKey: 'authorId' });
 
 export default User;

@@ -29,6 +29,7 @@ CategoryTranslation.init(
 Category.hasMany(CategoryTranslation, {
   as: 'localization',
   foreignKey: 'categoryId',
+  onDelete: 'CASCADE',
 });
 CategoryTranslation.belongsTo(Category, {
   as: 'category',

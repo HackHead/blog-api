@@ -5,6 +5,8 @@ import AuthRoutes from './api/v1/routes/Auth.Routes.js';
 import bodyParser from 'body-parser';
 import { log } from 'console';
 import cors from 'cors';
+import swaggerJSDoc from 'swagger-jsdoc'
+import swaggerUi from 'swagger-ui-express'
 
 class App {
   private PORT: number;
@@ -25,6 +27,29 @@ class App {
     this.APP.use(cors({ origin: '*' }));
   }
 
+  private setupDocumentation(){
+    const swaggerOptions = {
+      definition: {
+        openapi: '3.0.0',
+        info: {
+          title: 'My API',
+          version: '1.0.0',
+          description: 'Описание вашего API',
+        },
+        servers: [
+          {
+            url: 'http://localhost:9999', // Замените на ваш URL
+          },
+        ],
+      },
+      apis: ['./src/api/v1/routes/*.ts'], // Путь к вашим маршрутам API
+    };
+
+    const swaggerSpec = swaggerJSDoc(swaggerOptions);
+
+    this.APP.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+  }
+  
   private setupMiddleware() {
     this.APP.use(log);
   }
@@ -36,8 +61,9 @@ class App {
 
   private async boot(): Promise<void> {
     try {
-      this.setupBodyParser();
       // this.setupMiddleware();
+      this.setupBodyParser();
+      this.setupDocumentation()
       this.setupCors();
       this.setupRoutes('/api/v1', [BlogRoutes, AuthRoutes]);
 

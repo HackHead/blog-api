@@ -12,11 +12,7 @@ module.exports = {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      pub_date: {
-        type: DataTypes.DATE,
-        allowNull: true,
-        defaultValue: DataTypes.NOW,
-      },
+      
       name: {
         type: DataTypes.STRING,
         allowNull: false,
