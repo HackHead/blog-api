@@ -1858,3 +1858,4 @@
 2023-06-22T15:50:40.706Z [BLOG] [32minfo[39m: Database connection successfully established
 2023-06-22T15:50:40.764Z [BLOG] [32minfo[39m: Your application succesffully up and running on port 9999
 2023-06-22T15:51:58.858Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
+2023-06-22T16:53:32.319Z [BLOG] [32minfo[39m: [GET] /api/v1/articles
