@@ -2,6 +2,7 @@ import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
 import Category from './Category.js';
 import Language from './Language.js';
+import Article from './Article.js';
 
 class CategoryTranslation extends Model {}
 
@@ -21,7 +22,7 @@ CategoryTranslation.init(
     },
   },
   {
-    sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
+    sequelize: connection, 
     timestamps: true,
   }
 );
@@ -31,10 +32,12 @@ Category.hasMany(CategoryTranslation, {
   foreignKey: 'categoryId',
   onDelete: 'CASCADE',
 });
-CategoryTranslation.belongsTo(Category, {
-  as: 'category',
-  foreignKey: 'categoryId',
-});
+
+// CategoryTranslation.belongsTo(Category, {
+//   as: 'category',
+//   foreignKey: 'categoryId',
+// });
+
 CategoryTranslation.belongsTo(Language, {
   foreignKey: 'languageId',
   as: 'language',

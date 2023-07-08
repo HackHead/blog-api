@@ -47,13 +47,16 @@ User.init(
     },
   },
   {
-    sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
+    sequelize: connection, 
     timestamps: true,
   }
 );
 
-  
-User.hasMany(Article, { foreignKey: 'articleID', onDelete: 'CASCADE' });
+User.hasMany(Article, {
+  foreignKey: 'authorId',
+  as: 'article',
+  onDelete: 'CASCADE',
+});
 Article.belongsTo(User, { as: 'author', foreignKey: 'authorId' });
 
 export default User;

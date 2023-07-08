@@ -1,6 +1,9 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
 import Language from './Language.js';
+import Article from './Article.js';
+import Domain from './Domain.js';
+import Category from './Category.js';
 
 class ArticleTranslation extends Model {}
 
@@ -30,12 +33,17 @@ ArticleTranslation.init(
     },
   },
   {
-    sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
+    sequelize: connection,
     timestamps: true,
   }
 );
 
 ArticleTranslation.belongsTo(Language, {
+  foreignKey: 'languageId',
+  as: 'language',
+});
+
+Language.hasMany(ArticleTranslation, {
   foreignKey: 'languageId',
   as: 'language',
 });

@@ -40,7 +40,7 @@ APIToken.init(
     },
   },
   {
-    sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
+    sequelize: connection,
     timestamps: true,
   }
 );

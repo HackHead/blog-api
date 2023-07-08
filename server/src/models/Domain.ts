@@ -1,6 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
-import Article from './Article.js';
 
 class Domain extends Model {}
 
@@ -25,7 +24,7 @@ Domain.init(
     },
   },
   {
-    sequelize: connection, // Assuming you have an existing Sequelize instance named 'sequelize'
+    sequelize: connection, 
     timestamps: true,
   }
 );
