@@ -13,7 +13,7 @@ const Logger = createLogger({
     colorize(), // Apply colors
     label({ label: 'BLOG' }),
     timestamp(),
-    logFormat,
+    logFormat
   ),
   transports: [
     new transports.Console(),

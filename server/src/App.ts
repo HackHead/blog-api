@@ -2,18 +2,21 @@ import Logger from './modules/Logger.js';
 import express, { Application, Router } from 'express';
 import BlogRoutes from './api/v1/routes/Blog.Routes.js';
 import AuthRoutes from './api/v1/routes/Auth.Routes.js';
+import StorageRoutes from './api/v1/routes/Storage.Routes.js';
 import bodyParser from 'body-parser';
-import { log } from 'console';
 import cors from 'cors';
-import swaggerJSDoc from 'swagger-jsdoc'
-import swaggerUi from 'swagger-ui-express'
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
+import path from 'path';
+import fs from 'fs'
+import { APP_HOST, APP_PORT } from './modules/Config.js';
 
 class App {
   private PORT: number;
   private APP: Application;
 
   constructor() {
-    this.PORT = 9999;
+    this.PORT = Number(APP_PORT) || 999;
     this.APP = express();
 
     this.boot();
@@ -27,7 +30,7 @@ class App {
     this.APP.use(cors({ origin: '*' }));
   }
 
-  private setupDocumentation(){
+  private setupDocumentation() {
     const swaggerOptions = {
       definition: {
         openapi: '3.0.0',
@@ -38,7 +41,7 @@ class App {
         },
         servers: [
           {
-            url: 'http://localhost:9999', // Замените на ваш URL
+            url: `${APP_HOST}:${APP_PORT}`, // Замените на ваш URL
           },
         ],
       },
@@ -49,31 +52,51 @@ class App {
 
     this.APP.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
   }
+
   
-  private setupMiddleware() {
-    this.APP.use(log);
-  }
 
   private setupBodyParser() {
     this.APP.use(bodyParser.urlencoded({ extended: true }));
     this.APP.use(bodyParser.json());
   }
 
+  // Создаем эндпоинт для получения изображений
+  private setupServeImages(){
+    this.APP.get('/uploads/:filename', (req, res) => {
+      const { filename } = req.params;
+      const imagePath = path.join(path.resolve(), 'uploads', filename);
+    
+      if (fs.existsSync(imagePath)) {
+        res.sendFile(imagePath);
+      } else {
+        res.status(404).json({
+          error: {
+            statusCode: 404,
+            message: 'Изображение не найдено'
+          }
+        });
+      }
+    });
+  }
+  
+  // Запускаем приложение
   private async boot(): Promise<void> {
     try {
-      // this.setupMiddleware();
       this.setupBodyParser();
-      this.setupDocumentation()
+      this.setupDocumentation();
       this.setupCors();
-      this.setupRoutes('/api/v1', [BlogRoutes, AuthRoutes]);
+
+      this.setupServeImages();
+      this.setupRoutes('/api/v1', [BlogRoutes, AuthRoutes, StorageRoutes]);
 
       this.APP.listen(this.PORT, () => {
         Logger.info(
-          `Your application succesffully up and running on port ${this.PORT}`
+          `Ваше приложение успешно запущено и работает на порту ${this.PORT}`
         );
       });
     } catch (error) {
-      Logger.error('An error occured while setting up your application');
+      Logger.error('Возникла ошибка во время запуска вашего приложения');
+      Logger.error(error);
     }
   }
 }

@@ -10,3 +10,14 @@ module.exports = {
     await queryInterface.bulkDelete('ArticleTranslations', null, {});
   },
 };
+
+
+// module.exports = {
+//   up: async (queryInterface, Sequelize) => {
+//     await Promise.resolve();
+//   },
+
+//   down: async (queryInterface, Sequelize) => {
+//     await Promise.resolve();
+//   },
+// };

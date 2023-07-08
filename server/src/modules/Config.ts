@@ -12,4 +12,7 @@ export const {
   POSTGRES_HOST,
   POSTGRES_PORT,
   POSTGRES_DATABASE_NAME,
+  APP_HOST,
+  APP_PORT,
+  MODE,
 } = process.env;
