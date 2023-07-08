@@ -8,10 +8,12 @@ export interface ParsingResults {
   limit: number;
   lang: Array<string>;
   categories: Array<string>;
+  pub_date: Date;
+  domain: string;
 }
 
 const isValidQueryParams = (params: any): ParsingResults => {
-  let { limit = '15', page = '1', lang, categories } = params;
+  let { limit = '15', page = '1', lang, categories, pub_date, domain } = params;
 
   const restParams = {} as ParsingResults;
 
@@ -30,6 +32,7 @@ const isValidQueryParams = (params: any): ParsingResults => {
     restParams.page = Number(page);
   }
 
+  
   if (lang) {
     const parsed = lang.split(',');
 
@@ -45,20 +48,37 @@ const isValidQueryParams = (params: any): ParsingResults => {
     }
   }
 
+  if (pub_date && !isNaN(Date.parse(pub_date))) {
+    restParams.pub_date = pub_date;
+  }
+
   if (categories) {
     const parsed = categories.split(',');
     if (
       parsed.every((category: string) => {
         return (
           validator.isLength(category, { min: 1, max: 64 }) &&
-          validator.isAlpha(category)
+          validator.isUUID(category)
         );
       })
     ) {
       restParams.categories = parsed;
     }
   }
+  if (domain) {
 
+    const schema = Joi.object({
+      domain: Joi.string().uri(),
+    })
+    
+    const {error} = schema.validate({
+      domain
+    })
+
+    if(!error){
+      restParams.domain = domain
+    }
+  }
   return {
     ...restParams,
   };
