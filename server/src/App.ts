@@ -9,7 +9,7 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import path from 'path';
 import fs from 'fs'
-import { APP_HOST, APP_PORT } from './modules/Config.js';
+import { APP_HOST, APP_PORT, NODE_ENV } from './modules/Config.js';
 
 class App {
   private PORT: number;

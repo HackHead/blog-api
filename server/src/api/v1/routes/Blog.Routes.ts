@@ -31,6 +31,22 @@ router.use(log);
  *   get:
  *     summary: Получить все категории и их переводы
  *     tags: [Categories]
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *         description: Принимает целое число от 1 до бесконечности, в случае если параметр не был предоставлен или был предоставлен но не был валидным - он автоматически принимает значение 1
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *         description: Лимит число от 1 до 100, в случае если не будет предоставлен - автоматически принимат значение 15
+ *       - in: query
+ *         name: lang
+ *         schema:
+ *           type: string
+ *         description: Массив языков переводы на которые нужно получить (ru, ar, pl, es, en), например ?lang=ru,en,ar
  *     responses:
  *       200:
  *         description: Successful response
@@ -230,11 +246,11 @@ export default router;
  *         createdAt:
  *           type: string
  *           format: date-time
- *           description: Creation timestamp
+ *           description: Timestamp
  *         updatedAt:
  *           type: string
  *           format: date-time
- *           description: Update timestamp
+ *           description: Timestamp
  *         author:
  *           $ref: '#/components/schemas/Author'
  *         thumbnail:
@@ -251,17 +267,17 @@ export default router;
  *       properties:
  *         first_name:
  *           type: string
- *           description: First name of the author
+ *           description: Имя
  *         last_name:
  *           type: string
- *           description: Last name of the author
+ *           description: Фамилия
  *         full_name:
  *           type: string
- *           description: Full name of the author
+ *           description: Ф.И
  *         email:
  *           type: string
  *           format: email
- *           description: Email address of the author
+ *           description: Email
  *
  *     Thumbnail:
  *       type: object
@@ -269,27 +285,27 @@ export default router;
  *         id:
  *           type: string
  *           format: uuid
- *           description: Thumbnail ID
+ *           description: Id
  *         url:
  *           type: string
- *           description: Thumbnail URL
+ *           description: Url
  *         alt:
  *           type: string
- *           description: Thumbnail alt text
+ *           description: Альтернативный текст
  *         width:
  *           type: integer
- *           description: Thumbnail width
+ *           description: Ширина изображения
  *         height:
  *           type: integer
- *           description: Thumbnail height
+ *           description: Высота изображения
  *         createdAt:
  *           type: string
  *           format: date-time
- *           description: Thumbnail creation timestamp
+ *           description: Timestamp
  *         updatedAt:
  *           type: string
  *           format: date-time
- *           description: Thumbnail update timestamp
+ *           description: Timestamp
  *
  *     Domain:
  *       type: object
@@ -297,15 +313,15 @@ export default router;
  *         id:
  *           type: string
  *           format: uuid
- *           description: Domain ID
+ *           description: Id
  *         ip_address:
  *           type: string
  *           format: ipv4
- *           description: IP address of the domain
+ *           description: IP адрес
  *         url:
  *           type: string
  *           format: uri
- *           description: URL of the domain
+ *           description: URL
  *         createdAt:
  *           type: string
  *           format: date-time
@@ -321,10 +337,10 @@ export default router;
  *         id:
  *           type: string
  *           format: uuid
- *           description: Category ID
+ *           description: ID
  *         name:
  *           type: string
- *           description: Category name
+ *           description: UI название для удобства
  *         locale:
  *           properties:
 *              en:
@@ -357,26 +373,26 @@ export default router;
  *         id:
  *           type: string
  *           format: uuid
- *           description: Language ID
+ *           description: ID
  *         name:
  *           type: string
- *           description: Language name
+ *           description: Имя языка (для удобства)
  *         createdAt:
  *           type: string
  *           format: date-time
- *           description: Language ID
+ *           description: timestamp
  *         updatedAt:
  *           type: string
  *           format: date-time
- *           description: Language ID
+ *           description: timestamp
  *         languageId:
  *           type: string
  *           format: uuid
- *           description: Language code
+ *           description: ID языка
  *         categoryId:
  *           type: string
  *           format: uuid
- *           description: Language code
+ *           description: id Категории
  * 
  *     ArticleTranslation:
  *       type: object
@@ -387,33 +403,33 @@ export default router;
  *           description: Language ID
  *         title:
  *           type: string
- *           description: Language name
+ *           description: Заголовок перевода
  *         pub_date:
  *           type: string
  *           format: date-time
- *           description: Language code
+ *           description: Дата публикации
  *         body:
  *           type: string
  *           format: uuid
- *           description: Language ID
+ *           description: Текст поста
  *         excerpt:
  *           type: string
- *           description: Language name
+ *           description: Короткий текст
  *         slug:
  *           type: string
- *           description: Language code
+ *           description: slug возможно гто то будете использовать
  *         createdAt:
  *           type: string
  *           format: date-time
- *           description: Language ID
+ *           description: Timestamp
  *         languageId:
  *           type: string
  *           format: uuid
- *           description: Language code
+ *           description: Id языка
  *         articleId:
  *           type: string
  *           format: uuid
- *           description: Language code
+ *           description: id статьи к которой прикреплен перевод
  *     Meta:
  *       type: object
  *       properties: {} # Empty properties for the meta object

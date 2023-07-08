@@ -15,4 +15,5 @@ export const {
   APP_HOST,
   APP_PORT,
   MODE,
+  NODE_ENV
 } = process.env;
