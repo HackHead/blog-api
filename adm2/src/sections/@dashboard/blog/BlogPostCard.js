@@ -65,7 +65,7 @@ export default function BlogPostCard({ post, index }) {
       <Card sx={{ position: 'relative' }}>
         <StyledCardMedia
         >
-          <StyledCover alt={'title'} src={thumbnail?.url || '/assets/images/covers/image-placeholder.svg'} />
+          <StyledCover alt={thumbnail.alt} src={thumbnail?.url || '/assets/images/covers/image-placeholder.svg'} />
         </StyledCardMedia>
 
         <CardContent
@@ -73,8 +73,6 @@ export default function BlogPostCard({ post, index }) {
           <Typography gutterBottom variant="caption" sx={{ color: 'text.disabled', display: 'block' }}>
             {fDate(createdAt)} by {author.full_name}
           </Typography>
-
-     
             <Link to={`/dashboard/article/edit/${id}`} style={{cursor: 'pointer', color: 'black', textDecoration: 'none'}}>{name}</Link>
 
           <Box
