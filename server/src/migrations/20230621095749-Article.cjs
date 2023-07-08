@@ -8,11 +8,6 @@ module.exports = {
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
       },
-      thumbnail: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      
       name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -25,14 +20,34 @@ module.exports = {
           model: 'Users',
           key: 'id',
         },
+        onDelete: 'CASCADE'
+      },
+      domainId: {
+        type: DataTypes.UUID,
+        allowNull: true, 
+        references: {
+          model: 'Domains',
+          key: 'id',
+        },
+        onDelete: 'SET NULL'
       },
       categoryId: {
+        allowNull: false,
         type: DataTypes.UUID,
-        allowNull: true,
         references: {
           model: 'Categories',
           key: 'id',
         },
+        onDelete: 'CASCADE'
+      },
+      thumbnailId: {
+        allowNull: false,
+        type: DataTypes.UUID,
+        references: {
+          model: 'Thumbnails',
+          key: 'id',
+        },
+        onDelete: 'SET NULL'
       },
       createdAt: {
         type: DataTypes.DATE,

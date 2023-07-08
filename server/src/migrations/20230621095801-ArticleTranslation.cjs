@@ -39,6 +39,7 @@ module.exports = {
           model: 'Articles',
           key: 'id',
         },
+        onDelete: 'CASCADE'
       },
       pub_date: {
         type: DataTypes.DATE,
@@ -60,3 +61,13 @@ module.exports = {
     await queryInterface.dropTable('ArticleTranslations');
   },
 };
+
+// module.exports = {
+//   up: async (queryInterface) => {
+//     await Promise.resolve()
+//   },
+
+//   down: async (queryInterface) => {
+//     await Promise.resolve()
+//   },
+// };

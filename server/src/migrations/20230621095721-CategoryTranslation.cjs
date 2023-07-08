@@ -28,6 +28,7 @@ module.exports = {
           model: 'Categories',
           key: 'id',
         },
+        onDelete: 'CASCADE'
       },
       createdAt: {
         type: DataTypes.DATE,
@@ -42,7 +43,16 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.removeConstraint('CategoryTranslations', 'unique_name_per_category');
     await queryInterface.dropTable('CategoryTranslations');
   },
 };
+
+// module.exports = {
+//   up: async (queryInterface) => {
+//     await Promise.resolve()
+//   },
+
+//   down: async (queryInterface) => {
+//     await Promise.resolve()
+//   },
+// };
