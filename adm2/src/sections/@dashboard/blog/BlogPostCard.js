@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Link, Card, Grid, Avatar, Typography, CardContent } from '@mui/material';
+import { Box, Card, Grid, Avatar, Typography, CardContent } from '@mui/material';
 // utils
 import { fDate } from '../../../utils/formatTime';
 import { fShortenNumber } from '../../../utils/formatNumber';
@@ -57,39 +58,14 @@ BlogPostCard.propTypes = {
 };
 
 export default function BlogPostCard({ post, index }) {
-  const { id, createdAt, updatedAt, thumbnail, pubDate, name, author, category } = post;
-  const latestPostLarge = index === 0;
-  const latestPost = index === 1 || index === 2;
+  const { id, createdAt, updatedAt, thumbnail, pubDate, name, author, category, excerpt } = post;
   
-  // const POST_INFO = [
-  //   { number: comment, icon: 'eva:message-circle-fill' },
-  //   { number: view, icon: 'eva:eye-fill' },
-  //   { number: share, icon: 'eva:share-fill' },
-  // ];
-
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card sx={{ position: 'relative' }}>
         <StyledCardMedia
         >
-          <SvgColor
-            color="paper"
-            src="/assets/icons/shape-avatar.svg"
-            sx={{
-              width: 80,
-              height: 36,
-              zIndex: 9,
-              bottom: -15,
-              position: 'absolute',
-              color: 'background.paper',
-            }}
-          />
-          <StyledAvatar
-            alt={author.full_name}
-            src={author.avatarUrl}
-          />
-
-          <StyledCover alt={'title'} src={thumbnail} />
+          <StyledCover alt={'title'} src={thumbnail?.url || '/assets/images/covers/image-placeholder.svg'} />
         </StyledCardMedia>
 
         <CardContent
@@ -98,13 +74,8 @@ export default function BlogPostCard({ post, index }) {
             {fDate(createdAt)} by {author.full_name}
           </Typography>
 
-          <StyledTitle
-            color="inherit"
-            variant="subtitle2"
-            underline="hover"
-          >
-            {name}
-          </StyledTitle>
+     
+            <Link to={`/dashboard/article/edit/${id}`} style={{cursor: 'pointer', color: 'black', textDecoration: 'none'}}>{name}</Link>
 
           <Box
             key={index}

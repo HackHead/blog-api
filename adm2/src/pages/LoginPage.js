@@ -73,10 +73,6 @@ export default function LoginPage() {
               Войти
             </Typography>
 
-            <Typography variant="body2" sx={{ mb: 5 }}>
-              Забыли пароль? {''}
-              <Link variant="subtitle2">Восстановить</Link>
-            </Typography>
 
             <LoginForm />
           </StyledContent>

@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
+import AuthContext from '../../../contexts/AuthContext';
 // mocks_
 import account from '../../../_mock/account';
 
@@ -9,16 +11,24 @@ import account from '../../../_mock/account';
 
 const MENU_OPTIONS = [
   {
-    label: 'Главная',
+    label: 'Блог',
     icon: 'eva:home-fill',
+    url: '/dashboard/blog'
   },
   {
     label: 'API Токены',
     icon: 'eva:person-fill',
+    url: '/dashboard/token'
   },
   {
-    label: 'Настройки',
+    label: 'Домены',
     icon: 'eva:settings-2-fill',
+    url: '/dashboard/domain'
+  },
+  {
+    label: 'Категории',
+    icon: 'eva:settings-2-fill',
+    url: '/dashboard/category'
   },
 ];
 
@@ -26,7 +36,9 @@ const MENU_OPTIONS = [
 
 export default function AccountPopover() {
   const [open, setOpen] = useState(null);
-
+  const {user} = useContext(AuthContext)
+  const go = useNavigate();
+  
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
@@ -35,6 +47,17 @@ export default function AccountPopover() {
     setOpen(null);
   };
 
+  const logout = () => {
+    handleClose();
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('user');
+    go('/login')
+  }
+
+  const goto = (url) => {
+    go(url);
+    handleClose()
+  };
   return (
     <>
       <IconButton
@@ -78,10 +101,10 @@ export default function AccountPopover() {
       >
         <Box sx={{ my: 1.5, px: 2.5 }}>
           <Typography variant="subtitle2" noWrap>
-            {account.displayName}
+            {user?.full_name}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {account.email}
+            {user?.email}
           </Typography>
         </Box>
 
@@ -89,7 +112,7 @@ export default function AccountPopover() {
 
         <Stack sx={{ p: 1 }}>
           {MENU_OPTIONS.map((option) => (
-            <MenuItem key={option.label} onClick={handleClose}>
+            <MenuItem key={option.label} onClick={() => goto(option.url)}>
               {option.label}
             </MenuItem>
           ))}
@@ -97,7 +120,7 @@ export default function AccountPopover() {
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
-        <MenuItem onClick={handleClose} sx={{ m: 1 }}>
+        <MenuItem onClick={logout} sx={{ m: 1 }}>
           Выйти
         </MenuItem>
       </Popover>

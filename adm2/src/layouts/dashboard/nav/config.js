@@ -1,36 +1,39 @@
 // component
+import { HomeIcon, KeyIcon, GlobeAltIcon, QueueListIcon, DocumentTextIcon, IdentificationIcon } from '@heroicons/react/24/solid'
 import SvgColor from '../../../components/svg-color';
+
 
 // ----------------------------------------------------------------------
 
 const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />;
 
 const navConfig = [
-  {
-    title: 'Главная',
-    path: '/dashboard/app',
-    icon: icon('ic_analytics'),
-  },
+  // {
+  //   title: 'Главная',
+  //   path: '/dashboard/app',
+  //   icon: <HomeIcon style={{width: '22px', height: '22px'}}/>,
+  // },
   {
     title: 'Токены',
     path: '/dashboard/token',
-    icon: icon('ic_user'),
+    icon: <KeyIcon style={{width: '22px', height: '22px'}}/>,
+  },
+  {
+    title: 'домены',
+    path: '/dashboard/domain',
+    icon: <GlobeAltIcon style={{width: '22px', height: '22px'}}/>,
   },
   {
     title: 'Категории',
     path: '/dashboard/category',
-    icon: icon('ic_cart'),
+    icon: <QueueListIcon style={{width: '22px', height: '22px'}}/>,
   },
   {
     title: 'Статьи',
     path: '/dashboard/blog',
-    icon: icon('ic_blog'),
+    icon: <DocumentTextIcon style={{width: '22px', height: '22px'}}/>,
   },
-  {
-    title: 'Авторизация',
-    path: '/login',
-    icon: icon('ic_lock'),
-  },
+  
   // {
   //   title: 'Not found',
   //   path: '/404',

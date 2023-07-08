@@ -1,31 +1,77 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-// @mui
-import { Link, Stack, IconButton, InputAdornment, TextField, Checkbox } from '@mui/material';
-import { LoadingButton } from '@mui/lab';
-// components
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, Stack, IconButton, InputAdornment, TextField, Button, Alert } from '@mui/material';
+import { useNavigate, Navigate } from 'react-router-dom';
+import Joi from 'joi';
+import AuthContext from '../../../contexts/AuthContext';
+import server from '../../../http/index';
 import Iconify from '../../../components/iconify';
-
-// ----------------------------------------------------------------------
 
 export default function LoginForm() {
   const navigate = useNavigate();
-
+  
   const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [alerts, setAlerts] = useState([]);
 
-  const handleClick = () => {
-    navigate('/dashboard', { replace: true });
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+
+      const schema = Joi.object({
+        email: Joi.string().email({ tlds: { allow: false } }).required(),
+        password: Joi.string().min(2).required()
+      });
+
+      const { error } = schema.validate({
+        email,
+        password
+      });
+
+      if (error) {
+        setAlerts([{id: Date.now(), severity: 'error', message: error.details[0].message}]);
+        return;
+      }
+
+      const res = await server.post('/login', {
+        email,
+        password
+      });
+
+      const jwt = res.data.data.token;
+      const user = res.data.data.user
+
+      if(jwt){ 
+        localStorage.setItem('jwt', jwt);
+        localStorage.setItem('user', JSON.stringify(user));
+        setLoggedIn(true)
+      };
+     
+    } catch (error) {
+      setAlerts([{id: Date.now(), severity: 'error', message: error.response.data.error.message}]);
+    }
   };
 
   return (
     <>
+    {
+     loggedIn ? <Navigate replace to="/dashboard/blog" /> :
+      <form onSubmit={handleSubmit}>
       <Stack spacing={3}>
-        <TextField name="email" label="Email" />
+        {
+          alerts.map(({id, severity, message}) => {
+            return ( <Alert key={id} severity={severity} sx={{margin: '1rem 0 2rem 0'}}>{message}</Alert>)
+          })
+        }
+        <TextField name="email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
         <TextField
           name="password"
           label="Пароль"
           type={showPassword ? 'text' : 'password'}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
@@ -33,21 +79,17 @@ export default function LoginForm() {
                   <Iconify icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
                 </IconButton>
               </InputAdornment>
-            ),
+            )
           }}
         />
       </Stack>
 
-      <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ my: 2 }}>
-        <Checkbox name="remember" label="Запомнить меня" />
-        <Link variant="subtitle2" underline="hover">
-            Запомнить меня на этом устройстве?
-        </Link>
-      </Stack>
-
-      <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
+      <Button fullWidth size="large" type="submit" variant="contained" sx={{ mt: '1rem' }}>
         Войти
-      </LoadingButton>
+      </Button>
+    </form>
+    }
     </>
+    
   );
 }

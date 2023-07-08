@@ -250,7 +250,7 @@ export default function UserPage() {
 
                               <TableCell align="center">{name}</TableCell>
                               <TableCell align="center">
-                                {description}
+                                {description || '-'}
                               </TableCell>
                               <TableCell align="center">{accessRights === 'fullAccess' ? <Chip label="Полный доступ" color="success" variant="outlined" /> : <Chip label="Только чтение" color="warning" variant="outlined" />}</TableCell>
 
@@ -270,33 +270,27 @@ export default function UserPage() {
                             </TableRow>
                           );
                         })}
-                        {emptyRows > 0 && (
-                          <TableRow style={{ height: 53 * emptyRows }}>
-                            <TableCell colSpan={6} />
-                          </TableRow>
-                        )}
                       </TableBody>
 
 
 
 
-                      {isNotFound && (
+                      {!tokens.length && (
                         <TableBody>
-                          <TableRow>
-                            <TableCell align="center" colSpan={6} sx={{ py: 3 }}>
+                          <TableRow sx={{py: '3rem'}}>
+                            <TableCell align="center" colSpan={6} sx={{ py: '7rem' }}>
                               <Paper
                                 sx={{
                                   textAlign: 'center',
                                 }}
                               >
-                                <Typography variant="h6" paragraph>
-                                  Not found
+                                <Typography variant="subtitle1" paragraph>
+                                  Вы еще не создали ни одного API токена
                                 </Typography>
 
-                                <Typography variant="body2">
-                                  No results found for &nbsp;
-                                  <strong>&quot;{filterName}&quot;</strong>.
-                                  <br /> Try checking for typos or using complete words.
+                                <Typography variant="">
+                                  Нажмите на кнопку "Создать токен" <br/>
+                                  добавьте имя, описание и права доступа
                                 </Typography>
                               </Paper>
                             </TableCell>

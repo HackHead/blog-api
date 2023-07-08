@@ -28,7 +28,7 @@ import {
   Alert,
   Snackbar
 } from '@mui/material';
-import DomainCreationModal from '../components/CategoryCreationModal';
+import DomainCreationModal from '../components/DomainCreationModal/index';
 
 // components
 import Label from '../components/label';
@@ -45,8 +45,8 @@ import CategoryListHead from '../sections/@dashboard/user/CategoryListHead';
 
 const TABLE_HEAD = [
   { id: 'id', label: 'Id', alignRight: false },
-  { id: 'name', label: 'Название', alignRight: false },
-  { id: 'status', label: 'Доступные переводы', alignRight: false },
+  { id: 'name', label: 'Url', alignRight: false },
+  { id: 'status', label: 'Ip', alignRight: false },
   { id: '' },
 ];
 
@@ -62,7 +62,6 @@ function descendingComparator(a, b, orderBy) {
   return 0;
 }
 
-
 export default function UserPage() {
   const [open, setOpen] = useState(null);
 
@@ -76,25 +75,23 @@ export default function UserPage() {
 
   const [orderBy, setOrderBy] = useState('name');
 
-  const [filterName, setFilterName] = useState('');
-
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-
   const [openCreationModal, setOpenCreationModal] = useState(false);
 
-  const [categories, setCategories] = useState([]);
+  const [domains, setDomains] = useState([]);
 
-  const [total, setTotal] = useState(0);
 
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedDomain, setSelectedDomain] = useState(null);
 
   const [isLoading, setLoading] = useState(true);
 
-  const [editableId, setEditableId] = useState(null);
-
-  const handleOpenMenu = (event, categoryId) => {
+  const [editableData, setEditableData] = useState(null)
+  
+  const handleOpenMenu = (event, domain, data) => {
     setOpen(event.currentTarget);
-    setEditableId(categoryId)
+    if(data.id){
+      setEditableData(data)
+    }
+    setSelectedDomain(domain)
   };
 
   const handleCloseMenu = () => {
@@ -116,28 +113,14 @@ export default function UserPage() {
     setSelected([]);
   };
 
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setPage(0);
-    setLimit(parseInt(event.target.value, 10))
-    setRowsPerPage(parseInt(event.target.value, 10));
-  };
-
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - USERLIST.length) : 0;
-
-  const fetchCategories = async () => {
+  const fetchDomains = async () => {
     setLoading(true);
     try {
-      const res = await server.get(`/categories?page=${page + 1}&limit=${limit}`)
+      const res = await server.get(`/domains`)
 
       const data = res.data.data
 
-      setCategories(data)
-      setTotal(res.data.meta.total)
+      setDomains(data)
     } catch (error) {
       console.log(error)
     } finally {
@@ -146,48 +129,51 @@ export default function UserPage() {
   }
 
   useEffect(() => {
-    fetchCategories();
+    fetchDomains();
   }, [page, limit])
 
-  const destroyCategory = async () => {
+  const destroyDomain = async () => {
     handleCloseMenu()
     try {
       setLoading(true);
-      await server.delete(`/categories/${editableId}`)
-      await fetchCategories();
+      await server.delete(`/domains/${selectedDomain}`)
+      await fetchDomains();
     } catch (error) {
       console.log('An error occured')
     } finally {
       setLoading(false);
     }
   }
-  const handleCloseModal = () => {
-    setOpenCreationModal(false)
-    setEditableId(null)
-  }
+
+  const handleModalClose = () => {
+    setOpenCreationModal(false);
+    setEditableData(null);
+  };
   return (
     <>
       <Helmet>
-        <title> Список категорий </title>
+        <title> Список доменов </title>
       </Helmet>
 
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            Категории
+            Домены
           </Typography>
-          <Button variant="contained" onClick={() => setOpenCreationModal(true)} startIcon={<Iconify icon="eva:plus-fill" />}>
-            Добавить категорию
+          <Button variant="contained" onClick={() => {setOpenCreationModal(true); setEditableData(null); }} startIcon={<Iconify icon="eva:plus-fill" />}>
+            Добавить домен
           </Button>
         </Stack>
-        <DomainCreationModal
+        <DomainCreationModal 
           open={openCreationModal}
-          onClose={() => handleCloseModal()}
-          onCreate={() => fetchCategories()}
-          data={editableId ? categories.filter(({ id }) => id === editableId) : null}
-        />
+          onClose={handleModalClose} // Update this line
+          onCreate={() => fetchDomains()}
+          onSave={() => fetchDomains()}
+          data={editableData}/>
         <Card>
+
           <>
+            {/* <UserListToolbar numSelected={selected.length} filterName={filterName} onFilterName={handleFilterByName} /> */}
             {
               !isLoading ?
                 <><Scrollbar>
@@ -197,15 +183,37 @@ export default function UserPage() {
                         order={order}
                         orderBy={orderBy}
                         headLabel={TABLE_HEAD}
-                        rowCount={total}
+                        rowCount={domains?.length}
                         numSelected={selected.length}
                         onRequestSort={handleRequestSort}
                         onSelectAllClick={handleSelectAllClick}
                       />
+                      
+                     {
+                      <TableBody>
+                        {domains.map((row) => {
+                          const { id, name, url, ip_address: ipAddress } = row;
 
-                      {!categories.length ? (
+                          return (
+                            <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={false}>
+                              <TableCell align="center">{id}</TableCell>
+                              <TableCell align="center">{url}</TableCell>
+                              <TableCell align="center">{ipAddress}</TableCell>
+                              <TableCell align="right">
+                                <IconButton size="large" color="inherit" onClick={(e) => handleOpenMenu(e, id, {id, url, ipAddress})}>
+                                  <Iconify icon={'eva:more-vertical-fill'} />
+                                </IconButton>
+                              </TableCell>
+                            </TableRow>
+                          );
+                        })}
+                      </TableBody>
+                     }
+                        
+
+                      {!domains.length && (
                         <TableBody>
-                          <TableRow sx={{ py: '3rem' }}>
+                          <TableRow sx={{py: '3rem'}}>
                             <TableCell align="center" colSpan={6} sx={{ py: '7rem' }}>
                               <Paper
                                 sx={{
@@ -213,67 +221,26 @@ export default function UserPage() {
                                 }}
                               >
                                 <Typography variant="subtitle1" paragraph>
-                                  Вы еще не добавили ни одной категории
+                                  Вы еще не добавили ни одного домена
                                 </Typography>
 
                                 <Typography variant="">
-                                  Нажмите на кнопку "Создать категорию" <br />
+                                  Нажмите на кнопку "Добавить домен" <br/>
                                 </Typography>
                               </Paper>
                             </TableCell>
                           </TableRow>
                         </TableBody>
-                      ) : (<TableBody>
-                        {categories.length && categories.map((row) => {
-                          const { id, name, locale } = row;
-
-                          return (
-                            <TableRow hover key={id} tabIndex={-1} >
-                              <TableCell align="center">{id}</TableCell>
-                              <TableCell align="center">{name}</TableCell>
-
-                              <TableCell align="center">
-                                {
-                                  Object.entries(locale).length ? Object.entries(locale).map(([code, data]) => {
-                                    return (<span key={data.id} className={`flag-${code}`} style={{ fontSize: '1.4rem', cursor: 'pointer' }} title={data.language.name}>  </span>);
-                                  }) : '-'
-                                }
-                              </TableCell>
-
-                              <TableCell align="right">
-                                <IconButton size="large" color="inherit" onClick={(e) => handleOpenMenu(e, id)}>
-                                  <Iconify icon={'eva:more-vertical-fill'} />
-                                </IconButton>
-                              </TableCell>
-                            </TableRow>
-                          );
-                        })}
-                      </TableBody>)
-                    }
-
+                      )}
                     </Table>
                   </TableContainer>
                 </Scrollbar>
 
-                  {
-                    categories.length ? (
-                      <TablePagination
-                        rowsPerPageOptions={[5, 15, 30]}
-                        component="div"
-                        count={total}
-                        rowsPerPage={rowsPerPage}
-                        page={page}
-                        onPageChange={handleChangePage}
-                        onRowsPerPageChange={handleChangeRowsPerPage}
-                        labelRowsPerPage={'На странице'}
-                      />
-                    ) : null
-                  }
-                  </> : (<Grid container alignItems="center"
-                    justifyContent="center"
-                    sx={{ minHeight: '400px' }}>
-                    <Grid item><CircularProgress /></Grid>
-                  </Grid>)
+                </> : (<Grid container alignItems="center"
+                  justifyContent="center"
+                  sx={{ minHeight: '400px' }}>
+                  <Grid item><CircularProgress /></Grid>
+                </Grid>)
             }
           </>
 
@@ -298,12 +265,12 @@ export default function UserPage() {
           },
         }}
       >
-        <MenuItem onClick={() => { setOpenCreationModal(true); handleCloseMenu(true) }}>
+        <MenuItem onClick={() => {setOpenCreationModal(true); handleCloseMenu()}}>
           <Iconify icon={'eva:edit-fill'} sx={{ mr: 2 }} />
           Изменить
         </MenuItem>
 
-        <MenuItem sx={{ color: 'error.main' }} onClick={() => { destroyCategory(); }}>
+        <MenuItem sx={{ color: 'error.main' }} onClick={() => { destroyDomain();handleCloseMenu() }}>
           <Iconify icon={'eva:trash-2-outline'} sx={{ mr: 2 }} />
           Удалить
         </MenuItem>

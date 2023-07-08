@@ -14,11 +14,6 @@ const AddTokenModal = ({ onTokenAdd, open, onClose, onCreate }) => {
   const [token, setToken] = useState('');
   const [alerts, setAlerts] = useState([]);
 
-  const addAlert = ({severity, message}) => {
-    setAlerts([...alerts, {id: Date.now(), severity, message}]);
-  };
-
-
   const handleClose = () => {
     onClose()
   };
@@ -28,10 +23,14 @@ const AddTokenModal = ({ onTokenAdd, open, onClose, onCreate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if(tokenName){
-        //
+      if(tokenName.trim().length < 2 || tokenName.trim().length > 64){
+        setAlerts([{id: Date.now(), severity: 'error', message: 'Длинна названия не должна быть меньше 2 и больше 64 символов'}]);
+        return;
       }
-      
+      if(tokenDescription.trim().length > 512){
+        setAlerts([{id: Date.now(), severity: 'error', message: 'Длинна описание не должна быть больше 512 символов'}]);
+        return;
+      }
       const res = await server.post('/tokens', {
         name: tokenName,
         description: tokenDescription,
@@ -68,11 +67,8 @@ const AddTokenModal = ({ onTokenAdd, open, onClose, onCreate }) => {
             border: 'none',
             outline: 'none'
           }}>
-            {
-            alerts.map(({id, severity, message}) => {
-              return ( <Alert key={id} severity={severity} sx={{margin: '1rem 0 2rem 0'}}>{message}</Alert>)
-            })
-          }
+            
+          
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <Typography variant="subtitle2" gutterBottom>
@@ -105,7 +101,11 @@ const AddTokenModal = ({ onTokenAdd, open, onClose, onCreate }) => {
               <Typography variant="h6" gutterBottom>
                 Создать API токен
               </Typography>
-
+              {
+            alerts.map(({id, severity, message}) => {
+              return ( <Alert key={id} severity={severity} sx={{margin: '1rem 0 2rem 0'}}>{message}</Alert>)
+            })
+          }
               <form onSubmit={handleSubmit}>
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
@@ -114,7 +114,7 @@ const AddTokenModal = ({ onTokenAdd, open, onClose, onCreate }) => {
                       variant="outlined"
                       fullWidth
                       value={tokenName}
-                      onChange={(e) => setTokenName(e.target.value.trim())}
+                      onChange={(e) => {setTokenName(e.target.value.trim()); setAlerts([])}}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -125,7 +125,7 @@ const AddTokenModal = ({ onTokenAdd, open, onClose, onCreate }) => {
                       maxRows={4}
                       label={'Описание'}
                       value={tokenDescription}
-                      onChange={(e) => setTokenDescription(e.target.value.trim())}
+                      onChange={(e) => {setTokenDescription(e.target.value); setAlerts([])}}
                     />
                   </Grid>
                   {/* <Grid item xs={12}>
