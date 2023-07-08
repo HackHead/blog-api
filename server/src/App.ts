@@ -53,8 +53,6 @@ class App {
     this.APP.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
   }
 
-  
-
   private setupBodyParser() {
     this.APP.use(bodyParser.urlencoded({ extended: true }));
     this.APP.use(bodyParser.json());

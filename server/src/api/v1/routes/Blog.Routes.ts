@@ -9,6 +9,24 @@ router.use(log);
 
 /**
  * @swagger
+ * /uploads/{filename}:
+ *  get:
+ *    summary: Получить определенное изображение
+ *    description: Получить определенное изображение по имени
+ *    parameters:
+ *      - in: path
+ *        name: filename
+ *        required: true
+ *        description: Название файла
+ *        schema:
+ *          type: string
+ *    responses:
+ *      '200':
+ *        description: File uploaded successfully.
+ *      '400':
+ *        description: Invalid request payload.
+ *      '500':
+ *        description: Internal server error.
  * /categories:
  *   get:
  *     summary: Получить все категории и их переводы
@@ -20,7 +38,7 @@ router.use(log);
  *           application/json:
  *             schema:
  *               type: object
- *               properties:
+ *               properties :
  *                 data:
  *                   type: array
  *                   items:

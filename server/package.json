@@ -9,7 +9,7 @@
     "kill": "pm2 stop node-server && pm2 delete node-server",
     "reload": "yarn kill && yarn prod",
     "format": "prettier --write \"src/**/*.ts\"",
-    "migrate": "NODE_ENV=development sequelize db:migrate",
+    "migrate": "NODE_ENV=production sequelize db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
     "wipe": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:migrate:undo:all",
     "admin": "ts-node cli/scripts/admin.ts"

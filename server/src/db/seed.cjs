@@ -19,7 +19,7 @@ function slugify(str) {
 }
 
 
-
+    
 const languages = [
     { id: '5072ccb6-520c-443f-bced-2a9732f227f1', "code": "en", "name": "English" },
     { id: 'c595019d-e4c5-42cc-b604-b775523fd07a', "code": "ru", "name": "Russian" },
