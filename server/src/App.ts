@@ -16,7 +16,7 @@ class App {
   private APP: Application;
 
   constructor() {
-    this.PORT = Number(APP_PORT) || 999;
+    this.PORT = Number(APP_PORT) || 9999;
     this.APP = express();
 
     this.boot();
