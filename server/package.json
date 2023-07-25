@@ -12,7 +12,7 @@
     "migrate": "sequelize db:migrate",
     "seed": "npx sequelize-cli db:seed:all",
     "wipe": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:migrate:undo:all",
-    "admin": "ts-node cli/scripts/admin.ts"
+    "admin": "node dist/cli/admin.js"
   },
   "version": "1.0.0",
   "license": "MIT",
