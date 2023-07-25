@@ -28,7 +28,7 @@ import {
   Alert,
   Snackbar
 } from '@mui/material';
-import DomainCreationModal from '../components/CategoryCreationModal';
+import CategoryCreationModal from '../components/CategoryCreationModal';
 
 // components
 import Label from '../components/label';
@@ -180,7 +180,7 @@ export default function UserPage() {
             Добавить категорию
           </Button>
         </Stack>
-        <DomainCreationModal
+        <CategoryCreationModal
           open={openCreationModal}
           onClose={() => handleCloseModal()}
           onCreate={() => fetchCategories()}

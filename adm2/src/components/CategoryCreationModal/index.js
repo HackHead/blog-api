@@ -22,6 +22,7 @@ const CategoryCreationModal = ({ onTokenAdd, open = false, onClose, onCreate, da
   const handleClose = () => {
     onClose();
     setAlerts([])
+    setCategoryName('')
   };
 
   useEffect(() => {
