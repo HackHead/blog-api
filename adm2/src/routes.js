@@ -32,10 +32,13 @@ export default function Router() {
       if(res.data.data.id){
         setIsAuth(true)
       } else {
+        
         setIsAuth(false)
       }
     } catch (error) {
      setIsAuth(false)
+        localStorage.removeItem('jwt');
+        localStorage.removeItem('user');
     } finally {
       setIsloading(false)
     }

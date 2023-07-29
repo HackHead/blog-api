@@ -14,7 +14,6 @@ export default function LoginForm() {
   const [email, setEmail] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [alerts, setAlerts] = useState([]);
-
   const userData = localStorage.getItem('user')
   const handleSubmit = async (e) => {
     try {
