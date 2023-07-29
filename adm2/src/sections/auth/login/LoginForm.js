@@ -12,9 +12,8 @@ export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
   const [alerts, setAlerts] = useState([]);
-  const userData = localStorage.getItem('user')
+  const {user: account} = useContext(AuthContext);
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
@@ -52,7 +51,7 @@ export default function LoginForm() {
     }
   };
 
-  if (userData) {
+  if (account?.id) {
     return <Navigate replace to="/dashboard/blog" />
   }
   return (
