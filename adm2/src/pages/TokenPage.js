@@ -211,7 +211,7 @@ export default function UserPage() {
           <Typography variant="h4" gutterBottom>
             Токены
           </Typography>
-          <Button variant="contained" onClick={() => setOpenTokenModal(true)} startIcon={<Iconify icon="eva:plus-fill" />}>
+          <Button variant="contained" onClick={() => setOpenTokenModal(true)} startIcon={<Iconify icon="eva:plus-fill" />} sx={{boxShadow: 'none'}}>
             Создать токен
           </Button>
         </Stack>

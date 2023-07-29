@@ -102,7 +102,7 @@ const DomainCreationModal = ({ onTokenAdd, open = false, onClose, onCreate, onSa
                 />
               </Grid>
               <Grid item xs={12} sx={{display: 'flex', justifyContent: 'space-between'}}>
-                <Button type="submit" variant="contained" color="info">
+                <Button type="submit" variant="contained" color="info" sx={{boxShadow: 'none'}}>
                 {data?.id ? 'Обновить' : 'Добавить'}
                 </Button>
                 <Button variant="contained" onClick={handleClose} color='error'>

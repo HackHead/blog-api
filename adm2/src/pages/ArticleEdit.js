@@ -320,7 +320,7 @@ export default function ArticleEdit() {
                       color='error'
                       sx={{ mr: '1rem' }}>Удалить</Button>
 
-                  <Button variant="contained" onClick={() => saveArticle()}>
+                  <Button variant="contained" onClick={() => saveArticle()} sx={{boxShadow: 'none'}}>
                       Обновить
                     </Button>
 

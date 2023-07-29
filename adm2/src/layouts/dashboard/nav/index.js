@@ -65,11 +65,11 @@ export default function Nav({ openNav, onCloseNav }) {
 
             <Box sx={{ ml: 2 }}>
               <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
-                {user.full_name}
+                {user?.full_name}
               </Typography>
 
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {user.email}
+                {user?.email}
               </Typography>
             </Box>
           </StyledAccount>

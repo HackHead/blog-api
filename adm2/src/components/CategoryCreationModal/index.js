@@ -21,8 +21,8 @@ const CategoryCreationModal = ({ onTokenAdd, open = false, onClose, onCreate, da
   
   const handleClose = () => {
     onClose();
-    setAlerts([])
-    setCategoryName('')
+    setAlerts([]);
+    setCategoryName('');
   };
 
   useEffect(() => {
@@ -159,7 +159,7 @@ const CategoryCreationModal = ({ onTokenAdd, open = false, onClose, onCreate, da
                 </Grid>
               </Grid>
               <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Button type="submit" variant="contained" color="info">
+                <Button type="submit" variant="contained" color="info" sx={{boxShadow: 'none'}}>
                   { data?.length ? 'Обновить' :  'Создать' }
                 </Button>
                 <Button variant="contained" onClick={handleClose} color='error'>

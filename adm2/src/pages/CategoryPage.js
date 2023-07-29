@@ -176,7 +176,7 @@ export default function UserPage() {
           <Typography variant="h4" gutterBottom>
             Категории
           </Typography>
-          <Button variant="contained" onClick={() => setOpenCreationModal(true)} startIcon={<Iconify icon="eva:plus-fill" />}>
+          <Button variant="contained" onClick={() => setOpenCreationModal(true)} startIcon={<Iconify icon="eva:plus-fill" />} sx={{boxShadow: 'none'}}>
             Добавить категорию
           </Button>
         </Stack>

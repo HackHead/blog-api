@@ -160,7 +160,7 @@ export default function UserPage() {
           <Typography variant="h4" gutterBottom>
             Домены
           </Typography>
-          <Button variant="contained" onClick={() => {setOpenCreationModal(true); setEditableData(null); }} startIcon={<Iconify icon="eva:plus-fill" />}>
+          <Button variant="contained" onClick={() => {setOpenCreationModal(true); setEditableData(null); }} startIcon={<Iconify icon="eva:plus-fill" />} sx={{boxShadow: 'none'}}>
             Добавить домен
           </Button>
         </Stack>

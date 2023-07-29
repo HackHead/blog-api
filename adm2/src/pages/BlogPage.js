@@ -82,7 +82,7 @@ export default function BlogPage() {
           <Typography variant="h4" gutterBottom>
             Статьи
           </Typography>
-          <Button onClick={() => go('/dashboard/article/new')} variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
+          <Button onClick={() => go('/dashboard/article/new')} variant="contained" startIcon={<Iconify icon="eva:plus-fill" />} sx={{boxShadow: 'none'}}>
             Создать статью
           </Button>
         </Stack>

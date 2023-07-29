@@ -8,17 +8,17 @@ import Iconify from '../../../components/iconify';
 
 export default function LoginForm() {
   const navigate = useNavigate();
-  
+
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [alerts, setAlerts] = useState([]);
 
+  const userData = localStorage.getItem('user')
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-
       const schema = Joi.object({
         email: Joi.string().email({ tlds: { allow: false } }).required(),
         password: Joi.string().min(2).required()
@@ -30,7 +30,7 @@ export default function LoginForm() {
       });
 
       if (error) {
-        setAlerts([{id: Date.now(), severity: 'error', message: error.details[0].message}]);
+        setAlerts([{ id: Date.now(), severity: 'error', message: error.details[0].message }]);
         return;
       }
 
@@ -42,54 +42,54 @@ export default function LoginForm() {
       const jwt = res.data.data.token;
       const user = res.data.data.user
 
-      if(jwt){ 
+      if (jwt) {
         localStorage.setItem('jwt', jwt);
         localStorage.setItem('user', JSON.stringify(user));
-        setLoggedIn(true)
+        navigate('/dashboard/blog')
       };
-     
+
     } catch (error) {
-      setAlerts([{id: Date.now(), severity: 'error', message: error.response.data.error.message}]);
+      setAlerts([{ id: Date.now(), severity: 'error', message: error.response.data.error.message }]);
     }
   };
 
+  if (userData) {
+    return <Navigate replace to="/dashboard/blog" />
+  }
   return (
     <>
-    {
-     loggedIn ? <Navigate replace to="/dashboard/blog" /> :
       <form onSubmit={handleSubmit}>
-      <Stack spacing={3}>
-        {
-          alerts.map(({id, severity, message}) => {
-            return ( <Alert key={id} severity={severity} sx={{margin: '1rem 0 2rem 0'}}>{message}</Alert>)
-          })
-        }
-        <TextField name="email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <Stack spacing={3}>
+          {
+            alerts.map(({ id, severity, message }) => {
+              return (<Alert key={id} severity={severity} sx={{ margin: '1rem 0 2rem 0' }}>{message}</Alert>)
+            })
+          }
+          <TextField name="email" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-        <TextField
-          name="password"
-          label="Пароль"
-          type={showPassword ? 'text' : 'password'}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
-                  <Iconify icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
-                </IconButton>
-              </InputAdornment>
-            )
-          }}
-        />
-      </Stack>
+          <TextField
+            name="password"
+            label="Пароль"
+            type={showPassword ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton onClick={() => setShowPassword(!showPassword)} edge="end">
+                    <Iconify icon={showPassword ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
+                  </IconButton>
+                </InputAdornment>
+              )
+            }}
+          />
+        </Stack>
 
-      <Button fullWidth size="large" type="submit" variant="contained" sx={{ mt: '1rem' }}>
-        Войти
-      </Button>
-    </form>
-    }
+        <Button fullWidth size="large" type="submit" variant="contained" sx={{ mt: '1rem', boxShadow: 'none' }}>
+          Войти
+        </Button>
+      </form>
     </>
-    
+
   );
 }
