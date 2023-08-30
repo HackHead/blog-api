@@ -9,8 +9,11 @@ import ThemeProvider from './theme';
 import { StyledChart } from './components/chart';
 import ScrollToTop from './components/scroll-to-top';
 
-import server from './http';
 import AuthContext from './contexts/AuthContext';
+import LocaleContext from './contexts/LocaleContext';
+import FetchingContext from './contexts/FetchingContext';
+
+import useLocale from './hooks/useLocale';
 // ----------------------------------------------------------------------
 
 
@@ -19,18 +22,34 @@ export default function App() {
   const userData = JSON.parse(localStorage.getItem('user'));
   const [token, setToken] = useState(localStorage.getItem('jwt'));
   const [user, setUser] = useState(userData);
-
+  const [isLoading, setIsloading] = useState(false);
+  
+  const [langs, ] = useState()
+  
+  const {
+    selectedLanguage,
+    availableLanguages,
+    setSelectedLanguage,
+    handleLocaleChange
+  } = useLocale();
+  
+  
+  
   return (
     <AuthContext.Provider value={{token, setToken, user, setUser}}>
-        <HelmetProvider>
-        <BrowserRouter>
-          <ThemeProvider>
-            <ScrollToTop />
-            <StyledChart />
-            <Router />
-          </ThemeProvider>
-        </BrowserRouter>
-      </HelmetProvider>
+      <FetchingContext.Provider value={{isLoading, setIsloading}}>
+        <LocaleContext.Provider value={{selectedLanguage, availableLanguages, setSelectedLanguage, handleLocaleChange}}>
+          <HelmetProvider>
+          <BrowserRouter>
+            <ThemeProvider>
+              <ScrollToTop />
+              <StyledChart />
+              <Router />
+            </ThemeProvider>
+          </BrowserRouter>
+        </HelmetProvider>
+        </LocaleContext.Provider>
+      </FetchingContext.Provider>
     </AuthContext.Provider>
   );
 }

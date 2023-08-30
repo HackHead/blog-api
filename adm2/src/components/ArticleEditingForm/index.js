@@ -4,13 +4,9 @@
     import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
     import { useState, useEffect, useCallback, useRef, useMemo } from "react";
     import { v4 as uuidv4 } from 'uuid';
-    import Joi from "joi";
     import SimpleMdeReact from "react-simplemde-editor";
     import "easymde/dist/easymde.min.css";
 
-    
-
- 
     const ArticleEditingForm = ({defaultData, languageId, onUpdate}) => {
         const editorRef = useRef(null)
           const editorOptions = useMemo(() => {
@@ -33,6 +29,7 @@
         const [excerpt, setExcerpt] = useState(defaultData?.excerpt || '');
         const [pubDate, setPubDate] = useState(defaultData?.pub_date ? new Date(defaultData?.pub_date) : new Date());
         const [body, setBody] = useState(defaultData?.body || '');
+        const [author_name, setAuthorName] = useState(defaultData?.author_name || '');
 
         const onBodyChange = useCallback((value) => {
             setBody(value);
@@ -44,9 +41,11 @@
                 title,
                 excerpt,
                 pub_date: pubDate,
-                body
-            })
-        }, [title, pubDate, excerpt, body, id])
+                body,
+                author_name
+            });
+        }, [title, pubDate, excerpt, body, id, author_name]);
+
         return (
             <Card sx={{ padding: '1rem' }} className="disabled">
                 <Grid item xs={12}>
@@ -58,6 +57,14 @@
                         onChange={(e) => { setTitle(e.target.value) }}
                     />
                     <TextField
+                        label="Имя автора"
+                        variant="outlined"
+                        fullWidth
+                        value={author_name}
+                        onChange={(e) => { setAuthorName(e.target.value) }}
+                        sx={{ mt: '1rem' }}
+                    />
+                    <TextField
                         multiline
                         fullWidth
                         rows={4}
@@ -65,7 +72,7 @@
                         label={'Описание'}
                         value={excerpt}
                         onChange={(e) => { setExcerpt(e.target.value)}}
-                        sx={{ mt: '2rem' }}
+                        sx={{ mt: '1rem' }}
                     />
                     <Grid container spacing={2} justifyContent="space-between">
                         <Grid item xs={12} lg={6} sx={{ mt: '1rem' }}>

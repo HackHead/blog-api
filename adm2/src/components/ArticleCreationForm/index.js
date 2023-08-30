@@ -13,6 +13,7 @@
         const [excerpt, setExcerpt] = useState('');
         const [pubDate, setPubDate] = useState(new Date());
         const [body, setBody] = useState('');
+        const [author_name, setAuthorName] = useState('');
 
         const onBodyChange = useCallback((value) => {
             setBody(value);
@@ -20,11 +21,12 @@
         
         const isValidTranslation = () => {
             const translationSchema = Joi.object({
-                title: Joi.string().required().max(64),
-                languageId: Joi.string().uuid().required(),
-                excerpt: Joi.string().max(512).required(),
-                pub_date: Joi.date(),
-                body: Joi.string().max(65536).required(),
+                title: Joi.string().optional(),
+                author_name: Joi.string().optional(),
+                languageId: Joi.string().uuid().optional(),
+                excerpt: Joi.string().optional(),
+                pub_date: Joi.date().optional(),
+                body: Joi.string().max(65536).optional(),
               })
 
             return translationSchema.validate({
@@ -32,22 +34,22 @@
                 excerpt,
                 pub_date: pubDate,
                 body,
-                languageId
+                languageId,
+                author_name,
             })
         }
         
         useEffect(() => {
-            const {error} = isValidTranslation();
-
-            if(error) { return }
+            console.log('updated..')
             onUpdate({
                 title,
                 pub_date: pubDate,
                 body,
                 excerpt,
-                languageId
+                languageId,
+                author_name
             })
-        }, [title, body, pubDate, excerpt]);
+        }, [title, body, pubDate, excerpt, author_name]);
         return (
             <Card sx={{ padding: '1rem' }} className="disabled">
                 <Grid item xs={12}>
@@ -58,6 +60,14 @@
                         value={title}
                         onChange={(e) => { setTitle(e.target.value) }}
                     />
+                   <TextField
+                        label="Имя автора"
+                        variant="outlined"
+                        fullWidth
+                        value={author_name}
+                        onChange={(e) => { setAuthorName(e.target.value) }}
+                        sx={{ mt: '1rem' }}
+                    />
                     <TextField
                         multiline
                         fullWidth
@@ -66,7 +76,7 @@
                         label={'Описание'}
                         value={excerpt}
                         onChange={(e) => { setExcerpt(e.target.value)}}
-                        sx={{ mt: '2rem', borderColor: 'black' }}
+                        sx={{ mt: '1rem', borderColor: 'black' }}
                     />
                     <Grid container spacing={2} justifyContent="space-between">
                         <Grid item xs={12} lg={6} sx={{ mt: '1rem' }}>
@@ -76,6 +86,7 @@
                                         label="Время публикации"
                                         value={pubDate}
                                         onChange={(newDate) => {setPubDate(newDate)}}
+                                        minDate={new Date()}
                                     />
                                 </LocalizationProvider>
                             </FormControl>

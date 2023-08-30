@@ -56,7 +56,7 @@ export default function ArticlePreview() {
 
       const data = res.data.data;
 
-      if(!data) { go('/dashboard/blog'); return;  }
+      if(!data) { go('/article'); return;  }
 
       setTitle(data.title);
       setExcerpt(data.excerpt);

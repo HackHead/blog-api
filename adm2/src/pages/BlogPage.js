@@ -1,45 +1,60 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { Helmet } from 'react-helmet-async';
 // @mui
-import { Grid, Button, Container, Stack, Typography, TablePagination, CircularProgress, TableBody, TableRow, TableCell, Paper, Table } from '@mui/material';
+import { Grid, Button, Container, Stack, Typography, TablePagination, CircularProgress, TableBody, TableRow, TableCell, Paper, Table, Tab, Tabs } from '@mui/material';
+
 // components
 import Snackbar from '@mui/material/Snackbar';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import qs from 'qs';
 
 import Iconify from '../components/iconify';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
-// mock
-import POSTS from '../_mock/blog';
-import USERLIST from '../_mock/user';
+
 import server from '../http';
+import LocaleContext from '../contexts/LocaleContext';
+import ArticleFilters from '../components/ArticleFilters';
+import useBlog from '../hooks/useBlog';
+import useCategory from '../hooks/useCategory';
+import useFilters from '../hooks/useFilters';
 
-
-const SORT_OPTIONS = [
-  { value: 'latest', label: 'Latest' },
-  { value: 'popular', label: 'Popular' },
-  { value: 'oldest', label: 'Oldest' },
-];
-
-// ----------------------------------------------------------------------
 
 export default function BlogPage() {
+  const go = useNavigate();
   const [rowsPerPage, setRowsPerPage] = useState(5);
-
+  const {locale} = useParams();
+  const {selectedLanguage, handleLocaleChange} = useContext(LocaleContext)
   
-  const [page, setPage] = useState(0);
-  const [limit, setLimit] = useState(24);
+ 
+
   const [total, setTotal] = useState(0);
-  const [posts, setPosts] = useState([]);
+  const [selectedTab, setSelectedTab] = useState(0);
+  const {
+    posts,
+    setPosts
+  } = useBlog();
+  
+  const {
+    limit,
+    setLimit,
+    page,
+    setPage,
+    dateFrom,
+    setDateFrom,
+    dateTo,
+    setDateTo,
+    categoryId,
+    setCategoryId,
+} = useFilters();
+  
+  const {
+    categories,
+    setCategories,
+  } = useCategory()
 
   const [isFetching, setFetching] = useState(false);
 
-  const go = useNavigate();
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-    console.log(page)
-  };
 
   const handleChangeRowsPerPage = (event) => {
     setPage(0);
@@ -50,7 +65,16 @@ export default function BlogPage() {
   const fetchPosts = async () => {
     setFetching(true);
     try {
-      const res = await server.get(`/articles?limit=${limit}&page=${page + 1}`);
+      const query = qs.stringify({
+        limit,
+        page: page + 1,
+        lang: selectedLanguage.code,
+        categories: categoryId,
+        dateFrom,
+        dateTo,
+      })
+
+      const res = await server.get(`/articles?${query}`);
 
       const data = res.data.data;
 
@@ -64,13 +88,39 @@ export default function BlogPage() {
     }
   }
 
-  const labelDisplayedRows = ({ from, to, count }) => {
-    return `${from}-${to} of ${count}`; // Customize the text here
+  const labelDisplayedRows = ({ from, to, count }) => (`${from}-${to} of ${count}`);
+
+  const fetchCategories = async () => {
+    try {
+      const res = await server.get(`/categories`);
+
+      const data = res.data.data;
+      setCategories(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }  
+
+  const handleTabChange = (event, newValue) => {
+    setSelectedTab(newValue); 
+    if(newValue > 0){
+      setCategoryId(categories[newValue - 1].id)
+    } else {
+      setCategoryId('')
+    }
   };
 
+  const handleDateChange= (newFromDate, newToDate) => {
+    setDateFrom(newFromDate);
+    setDateTo(newToDate);
+  }
+  
   useEffect(() => {
-    fetchPosts()
-  }, [page, limit])
+    if(!Object.keys(selectedLanguage).length){ return; }
+    fetchPosts();
+    fetchCategories();
+  }, [page, limit, selectedLanguage, dateFrom, dateTo, categoryId]);
+  
   return (
     <>
       <Helmet>
@@ -82,17 +132,25 @@ export default function BlogPage() {
           <Typography variant="h4" gutterBottom>
             Статьи
           </Typography>
-          <Button onClick={() => go('/dashboard/article/new')} variant="contained" startIcon={<Iconify icon="eva:plus-fill" />} sx={{boxShadow: 'none'}}>
+          <Button onClick={() => go('/article/new')} variant="contained" startIcon={<Iconify icon="eva:plus-fill" />} sx={{boxShadow: 'none'}}>
             Создать статью
           </Button>
         </Stack>
-
-        {/* <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
-          <BlogPostsSearch posts={POSTS} />
-          <BlogPostsSort options={SORT_OPTIONS} />
-        </Stack> */}
-
-
+        <ArticleFilters onUpdate={handleDateChange}/>
+        <Stack mx={{marginBottom: '1rem'}}>
+          <Tabs
+              variant="scrollable"
+              scrollButtons="auto"
+              aria-label="scrollable auto tabs example"
+              value={selectedTab}
+              onChange={handleTabChange}
+            >
+              <Tab label={'All'}/>
+              {categories.map((category) => {
+                return  <Tab key={category.id} label={category.name}/>
+              })}
+            </Tabs>
+        </Stack>
         {
           isFetching ?
             <Grid container alignItems="center"
@@ -116,7 +174,7 @@ export default function BlogPage() {
                         count={total}
                         rowsPerPage={limit}
                         page={page}
-                        onPageChange={handleChangePage}
+                        onPageChange={(e, page) => setPage(page)}
                         onRowsPerPageChange={handleChangeRowsPerPage}
                         labelRowsPerPage={'На странице'}
                         labelDisplayedRows={labelDisplayedRows}
@@ -149,7 +207,6 @@ export default function BlogPage() {
               </>
             )
         }
-
       </Container>
     </>
   );

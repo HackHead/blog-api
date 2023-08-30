@@ -82,10 +82,11 @@ export default function ArticleEdit() {
   const isValidTranslation = (body) => {
     const translationSchema = Joi.object({
       id: Joi.string().uuid().optional(), 
-      title: Joi.string().min(1),
-      excerpt: Joi.string().min(1),
-      pub_date: Joi.date().required(),
-      body: Joi.string().min(1).required(),
+      title: Joi.string().optional(),
+      author_name: Joi.string().optional(),
+      excerpt: Joi.string().optional(),
+      pub_date: Joi.date().required().optional(),
+      body: Joi.string().optional(),
     })
     return translationSchema.validate(body)
   }
@@ -108,11 +109,11 @@ export default function ArticleEdit() {
   }
 
   const handleFormUpdate = (updatedData, languageId) => {
-    const {value, error} = isValidTranslation(updatedData);
-    if(error){
-      console.log(error)
-      return
-    }
+    // const {value, error} = isValidTranslation(updatedData);
+    // if(error){
+    //   console.log(error)
+    //   return
+    // }
     updatedData.languageId = languageId
     const index = validTranslations.findIndex((trans) => trans.languageId === languageId);
     const validTranslationsCopy = [...validTranslations];
@@ -169,11 +170,10 @@ export default function ArticleEdit() {
         ...params,
       })
       
-      const data = res.data.data;
       await fetchData();
       const successMessage = (
         <strong>
-          <Link to={`/dashboard/blog`} className='simpe-link'>
+          <Link to={`/article`} className='simpe-link'>
             Смотреть другие статьи
           </Link>
         </strong>
@@ -183,7 +183,7 @@ export default function ArticleEdit() {
     } catch (error) {
       const errorMessage = (
         <strong>
-          <Link to={`/dashboard/blog`} className='simpe-link'>
+          <Link to={`/article`} className='simpe-link'>
           {error.response.data.error.message}
           </Link>
         </strong>
@@ -237,6 +237,7 @@ export default function ArticleEdit() {
           title: item.title,
           excerpt: item.excerpt,
           pub_date: item.pub_date,
+          author_name: item.author_name,
           body: item.body,
           languageId: `${item.language.id}`
         }
@@ -250,7 +251,7 @@ export default function ArticleEdit() {
       if(post?.domain){ setSelectedDomain(post.domain.id);}
       if(post?.category.id){ setSelectedCategory(post.category.id);}
     } catch (error) {
-      go('/dashboard/blog')
+      go('/article')
     }
     setLoading(false)
   }

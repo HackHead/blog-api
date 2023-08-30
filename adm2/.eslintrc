@@ -25,6 +25,15 @@
     }
   },
   "rules": {
+    "camelcase": [
+      2,
+      {
+        "properties": "never",
+        "ignoreDestructuring": true,
+        "ignoreImports": true,
+        "allow": ["author_name"] // Add any other exceptions here
+      }
+    ],
     "no-new": 0,
     "no-alert": 0,
     "no-shadow": 0,

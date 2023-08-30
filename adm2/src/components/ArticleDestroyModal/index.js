@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, TextField, Modal, Box, Typography, Grid, MenuItem,  Alert } from '@mui/material';
+import LocaleContext from '../../contexts/LocaleContext';
 import server from '../../http';
 
 const ArticleDestroyModal = ({ id, open = false, onClose }) => {
   const go = useNavigate();
-  
+  const {selectedLanguage} = useContext(LocaleContext)
   const destroy = async () => {
     try {
       await server.delete(`/articles/${id}`);
-      go('/dashboard/blog')
+      go(`/${selectedLanguage.code}/article`)
     } catch (error) {
       console.log(error)
     }

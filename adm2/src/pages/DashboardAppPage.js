@@ -8,7 +8,7 @@ export default function DashboardAppPage() {
 
   return (
     <>
-      <Navigate replace to={"/dashboard/blog"}/>
+      <Navigate replace to={"/article"}/>
     </>
   );
 }

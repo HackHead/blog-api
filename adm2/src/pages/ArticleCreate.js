@@ -38,7 +38,7 @@ import AuthContext from '../contexts/AuthContext';
 // ----------------------------------------------------------------------
 
 export default function ArticleCreate() {
-  const isNewArticle = useLocation().pathname === '/dashboard/article/new';
+  const isNewArticle = useLocation().pathname === '/article/new';
   const go = useNavigate();
   const { id } = useParams();
 
@@ -88,19 +88,10 @@ export default function ArticleCreate() {
   
 
   const isValidArticle = (body) => {
-    const translationSchema = Joi.object({
-      title: Joi.string().required().min(2).max(64),
-      languageId: Joi.string().uuid().required(),
-      excerpt: Joi.string().max(512).required(),
-      pub_date: Joi.date(),
-      body: Joi.string().max(65536).required(),
-    })
-
     const articleShema = Joi.object({
-      name: Joi.string().required().min(2).max(128),
+      name: Joi.string().required(),
       categoryId: Joi.string().uuid().required(),
       domainId: Joi.string().allow(false).uuid().optional(),
-      translations: Joi.array().items(translationSchema),
       alt: Joi.string().min(2).required(),
     });
 
@@ -132,7 +123,6 @@ export default function ArticleCreate() {
         categoryId: selectedCategory,
         domainId: selectedDomain,
         alt,
-        translations: localizations
       })
       if(error){
         setAlerts([...alerts, { id: Date.now(), title: 'Ошибка', content: error.details[0].message, severity: 'error' }])
@@ -164,7 +154,7 @@ export default function ArticleCreate() {
 
       const successMessage = (
         <strong>
-          <Link to={`/dashboard/article/edit/${data.article.id}`} className='simpe-link'>
+          <Link to={`/article/${data.article.id}`} className='simpe-link'>
             Редактировать
           </Link>
         </strong>
@@ -220,7 +210,7 @@ export default function ArticleCreate() {
       const data = res.data.data
 
       if(!data.length){
-        go('/dashboard/category')
+        go('/category')
       }
       
       setCategories(data);

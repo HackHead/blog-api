@@ -1,33 +1,18 @@
-import { useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, MenuItem, Stack, IconButton, Popover } from '@mui/material';
 
-// ----------------------------------------------------------------------
-
-const LANGS = [
-  {
-    value: 'ru',
-    label: 'Russian',
-    icon: '/assets/icons/ic_flag_ru.svg',
-  },
-  // {
-  //   value: 'de',
-  //   label: 'German',
-  //   icon: '/assets/icons/ic_flag_de.svg',
-  // },
-  // {
-  //   value: 'fr',
-  //   label: 'French',
-  //   icon: '/assets/icons/ic_flag_fr.svg',
-  // },
-];
-
+// Contexts
+import LocaleContext from '../../../contexts/LocaleContext'
 // ----------------------------------------------------------------------
 
 export default function LanguagePopover() {
   const [open, setOpen] = useState(null);
-
+  const go = useNavigate();
+  const {availableLanguages, selectedLanguage, handleLocaleChange} = useContext(LocaleContext)
+  const {locale} = useParams();
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
@@ -36,21 +21,35 @@ export default function LanguagePopover() {
     setOpen(null);
   };
 
+  const handleLanguageChange = (e, lang) => {
+    handleClose();
+    handleLocaleChange(lang.code)
+    go(`/${lang.code}/article`)
+  }
+
+  useEffect(() => {
+    if(locale && selectedLanguage){
+      handleLocaleChange(locale)
+    }
+  }, [])
+  
   return (
     <>
-      <IconButton
-        onClick={handleOpen}
-        sx={{
-          padding: 0,
-          width: 35,
-          height: 35,
-          ...(open && {
-            bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.focusOpacity),
-          }),
-        }}
-      >
-        <img src={LANGS[0].icon} alt={LANGS[0].label} />
-      </IconButton>
+      {!!selectedLanguage && (
+        <IconButton
+          onClick={handleOpen}
+          sx={{
+            padding: 0,
+            width: 35,
+            height: 35,
+            ...(open && {
+              bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.focusOpacity),
+            }),
+          }}
+        >
+          <span className={`flag-${selectedLanguage.code}`} style={{ fontSize: '1.4rem', cursor: 'pointer', marginRight: '0.5rem'}} title={selectedLanguage.name}>  </span>
+        </IconButton>
+      )}
 
       <Popover
         open={Boolean(open)}
@@ -73,14 +72,25 @@ export default function LanguagePopover() {
         }}
       >
         <Stack spacing={0.75}>
-          {LANGS.map((option) => (
-            <MenuItem key={option.value} selected={option.value === LANGS[0].value} onClick={() => handleClose()}>
-              <Box component="img" alt={option.label} src={option.icon} sx={{ width: 28, mr: 2 }} />
-
-              {option.label}
-            </MenuItem>
-          ))}
-        </Stack>
+        {availableLanguages.map((lang) => (
+          <MenuItem
+            key={lang.id}
+            selected={lang.id === selectedLanguage.id}
+            onClick={(event) => handleLanguageChange(event, lang)}
+          >
+            <span
+              className={`flag-${lang.code}`}
+              style={{
+                fontSize: '1.4rem',
+                cursor: 'pointer',
+                marginRight: '0.5rem',
+              }}
+              title={lang.name}
+            />
+            {lang.name}
+          </MenuItem>
+        ))}
+        </Stack> 
       </Popover>
     </>
   );

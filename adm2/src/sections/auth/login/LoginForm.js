@@ -43,7 +43,7 @@ export default function LoginForm() {
       if (jwt) {
         localStorage.setItem('jwt', jwt);
         localStorage.setItem('user', JSON.stringify(user));
-        navigate('/dashboard/blog')
+        navigate('/article')
       };
 
     } catch (error) {
@@ -52,7 +52,7 @@ export default function LoginForm() {
   };
 
   if (account?.id) {
-    return <Navigate replace to="/dashboard/blog" />
+    return <Navigate replace to="/article" />
   }
   return (
     <>

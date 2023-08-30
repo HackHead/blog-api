@@ -6,6 +6,7 @@ import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover 
 import AuthContext from '../../../contexts/AuthContext';
 // mocks_
 import account from '../../../_mock/account';
+import LocaleContext from '../../../contexts/LocaleContext';
 
 // ----------------------------------------------------------------------
 
@@ -13,22 +14,22 @@ const MENU_OPTIONS = [
   {
     label: 'Блог',
     icon: 'eva:home-fill',
-    url: '/dashboard/blog'
+    url: '/article'
   },
   {
     label: 'API Токены',
     icon: 'eva:person-fill',
-    url: '/dashboard/token'
+    url: '/token'
   },
   {
     label: 'Домены',
     icon: 'eva:settings-2-fill',
-    url: '/dashboard/domain'
+    url: '/domain'
   },
   {
     label: 'Категории',
     icon: 'eva:settings-2-fill',
-    url: '/dashboard/category'
+    url: '/category'
   },
 ];
 
@@ -38,7 +39,7 @@ export default function AccountPopover() {
   const [open, setOpen] = useState(null);
   const {user} = useContext(AuthContext)
   const go = useNavigate();
-  
+  const {selectedLanguage} = useContext(LocaleContext)
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
@@ -55,7 +56,8 @@ export default function AccountPopover() {
   }
 
   const goto = (url) => {
-    go(url);
+    console.log(`/${selectedLanguage.code}/${url}`)
+    go(`/${selectedLanguage.code}/${url}`);
     handleClose()
   };
   return (
@@ -110,13 +112,13 @@ export default function AccountPopover() {
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
-        <Stack sx={{ p: 1 }}>
+        {/* <Stack sx={{ p: 1 }}>
           {MENU_OPTIONS.map((option) => (
             <MenuItem key={option.label} onClick={() => goto(option.url)}>
               {option.label}
             </MenuItem>
           ))}
-        </Stack>
+        </Stack> */}
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 

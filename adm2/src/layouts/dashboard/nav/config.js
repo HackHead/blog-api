@@ -15,22 +15,22 @@ const navConfig = [
   // },
   {
     title: 'Токены',
-    path: '/dashboard/token',
+    path: '/token',
     icon: <KeyIcon style={{width: '22px', height: '22px'}}/>,
   },
   {
     title: 'домены',
-    path: '/dashboard/domain',
+    path: '/domain',
     icon: <GlobeAltIcon style={{width: '22px', height: '22px'}}/>,
   },
   {
     title: 'Категории',
-    path: '/dashboard/category',
+    path: '/category',
     icon: <QueueListIcon style={{width: '22px', height: '22px'}}/>,
   },
   {
     title: 'Статьи',
-    path: '/dashboard/blog',
+    path: '/article',
     icon: <DocumentTextIcon style={{width: '22px', height: '22px'}}/>,
   },
   

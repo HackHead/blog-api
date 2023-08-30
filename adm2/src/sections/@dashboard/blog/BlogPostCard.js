@@ -1,3 +1,5 @@
+import { useContext, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // @mui
@@ -9,6 +11,7 @@ import { fShortenNumber } from '../../../utils/formatNumber';
 //
 import SvgColor from '../../../components/svg-color';
 import Iconify from '../../../components/iconify';
+import LocaleContext from '../../../contexts/LocaleContext';
 
 // ----------------------------------------------------------------------
 
@@ -58,8 +61,11 @@ BlogPostCard.propTypes = {
 };
 
 export default function BlogPostCard({ post, index }) {
-  const { id, createdAt, updatedAt, thumbnail, pubDate, name, author, category, excerpt } = post;
-  
+  const { id, createdAt, thumbnail, author, category, name } = post;
+  const {selectedLanguage} = useContext(LocaleContext);
+
+  const categoryName = post?.category.locale[selectedLanguage.code]?.name;
+  const postTitle = post?.locale[selectedLanguage.code]?.title;
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card sx={{ position: 'relative' }}>
@@ -73,20 +79,15 @@ export default function BlogPostCard({ post, index }) {
           <Typography gutterBottom variant="caption" sx={{ color: 'text.disabled', display: 'block' }}>
             {fDate(createdAt)} by {author.full_name}
           </Typography>
-            <Link to={`/dashboard/article/edit/${id}`} style={{cursor: 'pointer', color: 'black', textDecoration: 'none'}}>{name}</Link>
+            <Link to={`/article/${id}`} style={{cursor: 'pointer', color: 'black', textDecoration: 'none'}}>{name}</Link>
 
           <Box
             key={index}
             sx={{
               display: 'flex',
               alignItems: 'center',
-              // ml: index === 0 ? 0 : 1.5,
-              // ...((latestPostLarge || latestPost) && {
-              //   color: 'grey.500',
-              // }),
             }}
           >
-            {/* <Iconify icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }} /> */}
             <Typography variant="caption">{category.name}</Typography>
           </Box>
         </CardContent>
