@@ -13,6 +13,6 @@
   "ts-node": {
     "esm": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "../../sanction-detector/server/src/controllers/Address.Controller.ts"],
   "exclude": ["node_modules", "**/*.test.ts"]
 }

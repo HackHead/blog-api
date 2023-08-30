@@ -9,12 +9,16 @@ export interface ParsingResults {
   lang: Array<string>;
   categories: Array<string>;
   pub_date: Date;
+  dateFrom: Date;
+  dateTo: Date;
   domain: string;
 }
 
 const isValidQueryParams = (params: any): ParsingResults => {
-  let { limit = '15', page = '1', lang, categories, pub_date, domain } = params;
+  let { limit = '15', page = '1', lang, categories, pub_date, domain, dateFrom, dateTo } = params;
 
+  console.log(params)
+  
   const restParams = {} as ParsingResults;
 
   if (
@@ -48,8 +52,13 @@ const isValidQueryParams = (params: any): ParsingResults => {
     }
   }
 
-  if (pub_date && !isNaN(Date.parse(pub_date))) {
-    restParams.pub_date = pub_date;
+
+  if (dateFrom && !isNaN(Date.parse(dateFrom))) {
+    restParams.dateFrom = dateFrom;
+  }
+
+  if (dateTo && !isNaN(Date.parse(dateTo))) {
+    restParams.dateTo = dateTo;
   }
 
   if (categories) {

@@ -10,7 +10,7 @@ module.exports = {
       },
       name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
       },
       authorId: {

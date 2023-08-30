@@ -1,9 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../db/connection.js';
 import Language from './Language.js';
-import Article from './Article.js';
-import Domain from './Domain.js';
-import Category from './Category.js';
 
 class ArticleTranslation extends Model {}
 
@@ -16,20 +13,28 @@ ArticleTranslation.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+    },
+    author_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     pub_date: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
+      allowNull: true,
     },
     body: {
       type: DataTypes.STRING(65536),
+      allowNull: true,
     },
     excerpt: {
-      type: DataTypes.STRING(512),
+      type: DataTypes.STRING(16384),
+      allowNull: true,
     },
     slug: {
-      type: DataTypes.STRING(512),
+      type: DataTypes.STRING(16384),
+      allowNull: true,
     },
   },
   {

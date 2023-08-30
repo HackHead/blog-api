@@ -16,8 +16,8 @@
         primaryKey: true,
       },
       name: {
-        type: DataTypes.STRING(128),
-        allowNull: false,
+        type: DataTypes.STRING(16384),
+        allowNull: true,
         unique: true,
       },
     },

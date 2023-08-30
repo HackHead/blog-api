@@ -26,6 +26,7 @@ const languages = [
     { id: '8e15ccb5-25f3-474d-990e-734c27b52e9a', "code": "es", "name": "Spanish" },
     { id: '5bb6327a-e33e-4d06-a481-13ac8f5cfb18', "code": "ar", "name": "Arabic" },
     { id: 'e163b850-6bd5-44d8-89ad-4e446459f300', "code": "pl", "name": "Polish" },
+    { id: '10e4b280-78c9-49ac-a2d4-2751f3d0cc62', "code": "de", "name": "German" },
 ];
 
 const thumbnails = [

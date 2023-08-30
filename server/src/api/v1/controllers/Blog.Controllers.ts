@@ -428,20 +428,27 @@ export default class BlogControllers {
 
   public static async getArticles(req: Request, res: Response) {
     try {
-      const { lang, limit, page, categories, pub_date, domain } = isValidQueryParams(
+      const { lang, limit, page, categories, domain, dateFrom = new Date('1971-01-01'), dateTo = new Date()} = isValidQueryParams(
         req.query
       );
 
-      const pubDateCondition = pub_date
-        ? { where: { pub_date: { [Op.gt]: pub_date } } }
-        : {};
+      console.log(dateFrom, dateTo)
+      
+
+      const pubDateCondition = {
+        where: {
+          pub_date: {
+            [Op.between]: [dateFrom, dateTo]
+          }
+        }
+      }
       const langCondition = lang ? { where: { code: { [Op.in]: lang } } } : {};
       const categoriesCondition = categories
         ? { where: { id: { [Op.in]: categories } } }
         : {};
 
 
-        const domainCondition = domain ? { where: { url: domain } } : {};
+      const domainCondition = domain ? { where: { url: domain } } : {};
       
       const articles = await Article.findAll({
         attributes: ['id', 'name', 'createdAt', 'updatedAt'],
@@ -645,16 +652,16 @@ export default class BlogControllers {
 
   public static async createArticle(req: Request, res: Response) {
     try {
-      const { value: data, error } = isValidArticleBody(req.body);
+      // const { value: data, error } = isValidArticleBody(req.body);
 
-      if (error) {
-        return res.status(400).json({
-          error: {
-            statusCode: 400,
-            message: error.details[0].message,
-          },
-        });
-      }
+      // if (error) {
+      //   return res.status(400).json({
+      //     error: {
+      //       statusCode: 400,
+      //       message: error.details[0].message,
+      //     },
+      //   });
+      // }
 
       const {
         name,
@@ -662,8 +669,8 @@ export default class BlogControllers {
         authorId,
         domainId = null,
         translations,
-        thumbnailId
-      } = data;
+        thumbnailId,
+      } = req.body;
 
       const categoryExists = await Category.findOne({
         where: {
@@ -731,16 +738,15 @@ export default class BlogControllers {
         authorId,
         categoryId,
         domainId,
-        thumbnailId
+        thumbnailId,
       });
 
       let createdLocalizations;
-
       if (translations.length) {
         const localizations = translations.map((trans: any) => {
           trans.articleId = createdArticle.dataValues.id;
           trans.slug = slugify(trans.title);
-
+          
           delete trans.createdAt;
           return trans;
         });
@@ -748,6 +754,8 @@ export default class BlogControllers {
         createdLocalizations = await ArticleTranslation.bulkCreate(
           localizations
         );
+
+        console.log(createdLocalizations)
       }
 
       Logger.info(`Article created successfully`);
@@ -885,19 +893,19 @@ export default class BlogControllers {
         });
       }
 
-      const { value: data, error } = isValidArticleBody(req.body);
+      // const { value: data, error } = isValidArticleBody(req.body);
 
-      if (error) {
-        return res.status(400).json({
-          error: {
-            statusCode: 400,
-            message: error.details[0].message,
-          },
-        });
-      }
+      // if (error) {
+      //   return res.status(400).json({
+      //     error: {
+      //       statusCode: 400,
+      //       message: error.details[0].message,
+      //     },
+      //   });
+      // }
 
       const { name, categoryId, authorId, thumbnailId, domainId, translations } =
-        data;
+        req.body;
 
       const categoryExists = await Category.findOne({
         where: {
