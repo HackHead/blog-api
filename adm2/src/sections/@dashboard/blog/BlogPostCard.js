@@ -66,6 +66,8 @@ export default function BlogPostCard({ post, index }) {
 
   const categoryName = post?.category.locale[selectedLanguage.code]?.name;
   const postTitle = post?.locale[selectedLanguage.code]?.title;
+
+  console.log(post)
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card sx={{ position: 'relative' }}>
@@ -77,10 +79,9 @@ export default function BlogPostCard({ post, index }) {
         <CardContent
         >
           <Typography gutterBottom variant="caption" sx={{ color: 'text.disabled', display: 'block' }}>
-            {fDate(createdAt)} by {author.full_name}
+            {post?.locale?.[selectedLanguage?.code]?.pub_date ? fDate(post.locale[selectedLanguage.code].pub_date) : fDate(createdAt)} by {post?.locale?.[selectedLanguage?.code]?.author_name || author.full_name}
           </Typography>
-            <Link to={`/article/${id}`} style={{cursor: 'pointer', color: 'black', textDecoration: 'none'}}>{name}</Link>
-
+            <Link to={`/article/${id}`} style={{cursor: 'pointer', color: 'black', textDecoration: 'none'}}>{post?.locale?.[selectedLanguage?.code]?.title || name}</Link>
           <Box
             key={index}
             sx={{
