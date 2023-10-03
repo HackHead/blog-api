@@ -19,6 +19,7 @@ import isValidUUIDArray from '../../../validations/isValidUUIDArray.js';
 import Domain from '../../../models/Domain.js';
 import Joi from 'joi';
 import Thumbnail from '../../../models/Thumbnail.js';
+import moment from 'moment-timezone';
 
 const validator = val.default;
 
@@ -73,8 +74,6 @@ export default class BlogControllers {
         meta: {}
       })
     } catch (error) {
-      console.log(error)
-
       return res.status(500).json({
         error: {
           statusCode: 500,
@@ -232,7 +231,6 @@ export default class BlogControllers {
         meta: {},
       });
     } catch (error) {
-      console.log(error);
       Logger.error(error);
       return res.status(500).json({ error });
     }
@@ -246,7 +244,6 @@ export default class BlogControllers {
         data: domains,
       });
     } catch (error) {
-      console.log(error);
       return res.status(400).json({
         error: {
           statusCode: 400,
@@ -432,8 +429,6 @@ export default class BlogControllers {
         req.query
       );
 
-      console.log(dateFrom, dateTo)
-      
 
       const pubDateCondition = {
         where: {
@@ -591,7 +586,6 @@ export default class BlogControllers {
         },
       });
     } catch (error) {
-      console.log(error);
       Logger.error(error);
       return res.status(500).json({ error });
     }
@@ -645,7 +639,6 @@ export default class BlogControllers {
         },
       });
     } catch (error) {
-      console.log(error)
       return res.status(500).json({ error });
     }
   }
@@ -742,22 +735,23 @@ export default class BlogControllers {
       });
 
       let createdLocalizations;
+      console.log(translations)
+      
       if (translations.length) {
         const localizations = translations.map((trans: any) => {
           trans.articleId = createdArticle.dataValues.id;
           trans.slug = slugify(trans.title);
-          
+          trans.pub_date = moment(trans.pub_date).tz('Europe/Kiev').format()
           delete trans.createdAt;
           return trans;
         });
-
+        console.log(localizations)
         createdLocalizations = await ArticleTranslation.bulkCreate(
           localizations
         );
 
-        console.log(createdLocalizations)
       }
-
+      
       Logger.info(`Article created successfully`);
 
       return res.json({
@@ -767,7 +761,6 @@ export default class BlogControllers {
         },
       });
     } catch (error) {
-      console.log(error);
       return res.status(500).json({ error });
     }
   }
@@ -907,6 +900,7 @@ export default class BlogControllers {
       const { name, categoryId, authorId, thumbnailId, domainId, translations } =
         req.body;
 
+        
       const categoryExists = await Category.findOne({
         where: {
           id: categoryId,
@@ -975,7 +969,7 @@ export default class BlogControllers {
         try {
           localization.articleId = articleId;
           localization.slug = slugify(localization.title)
-
+          localization.pub_date = moment(localization.pub_date).tz('Europe/Kiev').format()
           await ArticleTranslation.upsert({
             ...localization,
           });
@@ -994,7 +988,7 @@ export default class BlogControllers {
       if (translations.length) {
         translations.forEach(updateTranslation);
       }
-
+      console.log(translations)
       Logger.info(`Статья успешно создана`);
 
       return res.json({
@@ -1003,7 +997,6 @@ export default class BlogControllers {
         },
       });
     } catch (error) {
-      console.log(error);
       return res.status(500).json({ error });
     }
   }
@@ -1016,7 +1009,7 @@ export default class BlogControllers {
         ...req.body,
         articleId: id,
       });
-
+      
       const { title, languageId, articleId } = data;
       const slug = slugify(title);
 
@@ -1067,7 +1060,6 @@ export default class BlogControllers {
         },
       });
     } catch (error) {
-      console.log(error);
       return res.status(500).json({ error });
     }
   }
@@ -1299,7 +1291,6 @@ export default class BlogControllers {
         },
       });
     } catch (error) {
-      console.log(error);
       return res.status(500).json({ error });
     }
   }

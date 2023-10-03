@@ -5,6 +5,8 @@ dotenv.config({
   path: path.join(path.resolve(), '.env.local'),
 });
 
+process.env.TZ = 'America/Los_Angeles';
+
 export const {
   JWT_SECRET = 'SECRET',
   POSTGRES_USER,
@@ -15,5 +17,5 @@ export const {
   APP_HOST,
   APP_PORT,
   MODE,
-  NODE_ENV
+  NODE_ENV,
 } = process.env;

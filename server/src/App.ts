@@ -10,7 +10,9 @@ import swaggerUi from 'swagger-ui-express';
 import path from 'path';
 import fs from 'fs'
 import { APP_HOST, APP_PORT } from './modules/Config.js';
+import moment from 'moment-timezone'
 
+console.log(process.env.TZ)
 class App {
   private PORT: number;
   private APP: Application;
@@ -18,7 +20,6 @@ class App {
   constructor() {
     this.PORT = Number(APP_PORT) || 9999;
     this.APP = express();
-
     this.boot();
   }
 
@@ -88,6 +89,8 @@ class App {
       this.setupRoutes('/api/v1', [BlogRoutes, AuthRoutes, StorageRoutes]);
 
       this.APP.listen(this.PORT, () => {
+        console.log(process.env.TZ)
+        console.log(moment(new Date()).tz('Europe/Kiev').format())
         Logger.info(
           `Ваше приложение успешно запущено и работает на порту ${this.PORT}`
         );
